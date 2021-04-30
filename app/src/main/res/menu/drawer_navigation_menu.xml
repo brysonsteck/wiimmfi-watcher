@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/friend_code"
+            android:title="Friend Codes"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:checked="true"
+            />
+        <item
+            android:id="@+id/roles"
+            android:title="Roles"
+            android:icon="@drawable/ic_baseline_person_24"
+            />
+        <item
+            android:id="@+id/login_regions"
+            android:title="Login Regions"
+            android:icon="@drawable/ic_baseline_login_24"
+            />
+
+        <item
+            android:id="@+id/room_match"
+            android:title="Room, Match"
+            android:icon="@drawable/ic_baseline_meeting_room_24"
+            />
+        <item
+            android:id="@+id/world"
+            android:title="World"
+            android:icon="@drawable/ic_baseline_public_24"
+            />
+        <item
+            android:id="@+id/conn_fail"
+            android:title="Connection Fail"
+            android:icon="@drawable/ic_baseline_warning_24"
+            />
+        <item
+            android:id="@+id/vr_br"
+            android:title="VR / BR"
+            android:icon="@drawable/ic_baseline_thumbs_up_down_24"
+            />
+    </group>
+
+</menu>
