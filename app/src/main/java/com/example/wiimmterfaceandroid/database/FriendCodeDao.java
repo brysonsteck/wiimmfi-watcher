@@ -16,8 +16,8 @@ public interface FriendCodeDao {
     @Query("SELECT * FROM friendcode")
     public List<FriendCode> getAll();
 
-    @Query("SELECT * FROM friendcode")
-    public FriendCode findByCode(String friendCode);
+//    @Query("SELECT * FROM friendcodeobj")
+//    public FriendCodeObj findByCode(String friendCode);
 
     @Insert
     public void insert(FriendCode friendCode);

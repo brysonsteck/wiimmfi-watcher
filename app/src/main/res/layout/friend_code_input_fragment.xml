@@ -16,7 +16,7 @@
         tools:layout_editor_absoluteY="15dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/friend_code_edit_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:drawablePadding="15dp"
@@ -33,6 +33,15 @@
         android:text="Watch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/friend_code_edit_text" />
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#B71C1C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/watch_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

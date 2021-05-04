@@ -5,21 +5,33 @@
     android:layout_height="match_parent"
     android:foregroundTint="@color/white">
 
+    <TextView
+        android:id="@+id/room_header_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/player_data_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/room_header_text" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/refresh_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:clickable="true"
+        android:enabled="true"
         android:foregroundTint="#FFFFFF"
         app:backgroundTint="#1E88E5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_baseline_refresh_24"
-        app:tint="@color/white"/>
+        app:tint="@color/white" />
 </androidx.constraintlayout.widget.ConstraintLayout>

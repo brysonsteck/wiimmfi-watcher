@@ -11,7 +11,7 @@
         <item
             android:id="@+id/roles"
             android:title="Roles"
-            android:icon="@drawable/ic_baseline_person_24"
+            android:icon="@drawable/ic_baseline_assignment_ind_24"
             />
         <item
             android:id="@+id/login_regions"
