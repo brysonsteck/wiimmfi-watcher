@@ -44,15 +44,7 @@ public class WatchCodeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         FriendCodeViewModel viewModel = new ViewModelProvider(getActivity()).get(FriendCodeViewModel.class);
 
-        RecentCodesAdapter adapter = new RecentCodesAdapter(
-                viewModel.getEntries(),
-                (entry) -> {
-                    viewModel.setCurrentEntry(entry);
-                    Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
-                    intent.putExtra("friendCode", entry.friendCode);
-                    startActivity(intent);
-                }
-        );
+        WatchCodeAdapter adapter = new WatchCodeAdapter(viewModel.getEntries());
         viewModel.getEntries().addOnListChangedCallback(new ObservableList.OnListChangedCallback<ObservableList<FriendCode>>() {
             @Override
             public void onChanged(ObservableList<FriendCode> sender) {

@@ -17,6 +17,8 @@ import androidx.room.RoomDatabase;
 
 import androidx.databinding.ObservableArrayList;
 
+import java.util.LinkedHashSet;
+
 public class FriendCodeViewModel extends AndroidViewModel {
         ObservableArrayList<FriendCode> entries = new ObservableArrayList<>();
         MutableLiveData<Boolean> saving = new MutableLiveData<>();
@@ -62,6 +64,7 @@ public class FriendCodeViewModel extends AndroidViewModel {
                     newEntry.name = name;
                     newEntry.friendCode = friendCode;
                     db.getFriendCodeDao().insert(newEntry);
+                    entries.add(newEntry);
                 }
 
                 saving.postValue(false);

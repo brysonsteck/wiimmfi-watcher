@@ -1,31 +1,29 @@
 package com.example.wiimmterfaceandroid;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableArrayList;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wiimmterfaceandroid.model.FriendCode;
-import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.textview.MaterialTextView;
+import com.example.wiimmterfaceandroid.wiimmfi.WiimmfiActivity;
+import com.google.android.material.button.MaterialButton;
 
-import java.util.List;
-
-public class RecentCodesAdapter extends RecyclerView.Adapter<RecentCodesAdapter.ViewHolder>{
+public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.ViewHolder>{
     ObservableArrayList<FriendCode> entries;
     OnFriendCodeClicked listener;
     public interface OnFriendCodeClicked {
         public void onClick(FriendCode entry);
     }
 
-    public RecentCodesAdapter (ObservableArrayList<FriendCode> entries, OnFriendCodeClicked listener) {
+    public WatchCodeAdapter(ObservableArrayList<FriendCode> entries) {
+
         this.entries = entries;
-        this.listener = listener;
     }
 
     @NonNull
@@ -37,12 +35,14 @@ public class RecentCodesAdapter extends RecyclerView.Adapter<RecentCodesAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Button fcButton = holder.itemView.findViewById(R.id.recent_friend_code_button);
+        MaterialButton fcButton = holder.itemView.findViewById(R.id.recent_friend_code_button);
         FriendCode currentFC = entries.get(position);
         fcButton.setText(currentFC.friendCode);
         fcButton.setOnClickListener(view -> {
-            if (listener == null) return;
-            listener.onClick(currentFC);
+                Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
+                intent.putExtra("friendCode", currentFC.friendCode);
+                view.getContext();
+
         });
     }
 

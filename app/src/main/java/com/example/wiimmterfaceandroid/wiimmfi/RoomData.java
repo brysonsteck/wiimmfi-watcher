@@ -16,10 +16,10 @@ public class RoomData {
 
     public RoomData (ArrayList<Player> players, String playerLink, String friendCode) {
         this.friendCode = friendCode;
-        this.playerLink = getPlayerLink();
+        getPlayerLink();
         Document doc = null;
 
-        if (playerLink == null) {
+        if (this.playerLink == null) {
             System.out.println("The player link is null for some reason");
         } else {
 
@@ -87,7 +87,7 @@ public class RoomData {
         }
     }
 
-    public String getPlayerLink() {
+    public void getPlayerLink() {
         try {
             Document doc = null;
 
@@ -109,7 +109,7 @@ public class RoomData {
                         System.out.println("Found friend code");
                         playerLink = data.split("\"")[3];
                         System.out.println("Player link: " + playerLink);
-
+                        break;
                     }
                 }
             }
@@ -118,7 +118,6 @@ public class RoomData {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return playerLink;
     }
     public ArrayList<Player> getPlayers() { return players; }
 

@@ -21,31 +21,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FragmentContainerView fcInput = findViewById(R.id.room_fragment);
-        this.database = Room.databaseBuilder(this, AppDatabase.class, "friend-codes-db").build();
-        new Thread(() -> {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            recentFCList.addAll(database.getFriendCodeDao().getAll());
-        }).start();
+//        FragmentContainerView fcInput = findViewById(R.id.room_fragment);
+//        this.database = Room.databaseBuilder(this, AppDatabase.class, "friend-codes-db").build();
+//        new Thread(() -> {
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            recentFCList.addAll(database.getFriendCodeDao().getAll());
+//        }).start();
 
 
 
-        setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.friend_code_input_fragment, new WatchCodeFragment(), null)
                     .setReorderingAllowed(true)
                     .commit();
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.room_fragment, new RecentCodesFragment(), null)
-                    .setReorderingAllowed(true)
-                    .commit();
+
+
         }
-
-
+        setContentView(R.layout.activity_main);
     }
 }
