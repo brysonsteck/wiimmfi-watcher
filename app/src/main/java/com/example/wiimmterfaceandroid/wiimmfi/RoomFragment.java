@@ -36,7 +36,7 @@ public class RoomFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         FloatingActionButton refreshButton = view.findViewById(R.id.refresh_button);
         TextView headerTextView = view.findViewById(R.id.room_header_text);
-        if (players == null) {
+        if (header == null) {
             header = "This player is not online, not inside a room or does not exist. Click the refresh button to try again, or click on the back button to enter a different friend code.";
         }
         headerTextView.setText(header);

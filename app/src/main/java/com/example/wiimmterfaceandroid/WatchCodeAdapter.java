@@ -1,5 +1,6 @@
 package com.example.wiimmterfaceandroid;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,12 +18,13 @@ import com.google.android.material.button.MaterialButton;
 public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.ViewHolder>{
     ObservableArrayList<FriendCode> entries;
     OnFriendCodeClicked listener;
+    Context context;
     public interface OnFriendCodeClicked {
         public void onClick(FriendCode entry);
     }
 
-    public WatchCodeAdapter(ObservableArrayList<FriendCode> entries) {
-
+    public WatchCodeAdapter(Context context, ObservableArrayList<FriendCode> entries) {
+        this.context = context;
         this.entries = entries;
     }
 
@@ -41,8 +43,7 @@ public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.View
         fcButton.setOnClickListener(view -> {
                 Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
                 intent.putExtra("friendCode", currentFC.friendCode);
-                view.getContext();
-
+                context.startActivity(intent);
         });
     }
 

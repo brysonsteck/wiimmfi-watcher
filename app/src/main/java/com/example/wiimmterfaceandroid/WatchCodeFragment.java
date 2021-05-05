@@ -44,7 +44,7 @@ public class WatchCodeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         FriendCodeViewModel viewModel = new ViewModelProvider(getActivity()).get(FriendCodeViewModel.class);
 
-        WatchCodeAdapter adapter = new WatchCodeAdapter(viewModel.getEntries());
+        WatchCodeAdapter adapter = new WatchCodeAdapter(getContext(), viewModel.getEntries());
         viewModel.getEntries().addOnListChangedCallback(new ObservableList.OnListChangedCallback<ObservableList<FriendCode>>() {
             @Override
             public void onChanged(ObservableList<FriendCode> sender) {
