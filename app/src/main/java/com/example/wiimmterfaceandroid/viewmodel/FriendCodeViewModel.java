@@ -25,7 +25,7 @@ public class FriendCodeViewModel extends AndroidViewModel {
         public FriendCodeViewModel(Application app) {
             super(app);
             saving.setValue(false);
-            db = Room.databaseBuilder(app, AppDatabase.class, "fc-database").build();
+            db = Room.databaseBuilder(app, AppDatabase.class, "friend-codes-db").build();
             new Thread(() -> {
                 try {
                     Thread.sleep(1000);
@@ -56,17 +56,12 @@ public class FriendCodeViewModel extends AndroidViewModel {
             saving.setValue(true);
             new Thread(() -> {
                 if (currentEntry.getValue() != null) {
-                    FriendCode current = currentEntry.getValue();
-                    current.name = name;
-                    current.friendCode = friendCode;
-                    db.getFriendCodeDao().update(current);
-                    int index = entries.indexOf(current);
-                    entries.set(index, current);
+
                 } else {
                     FriendCode newEntry = new FriendCode();
                     newEntry.name = name;
                     newEntry.friendCode = friendCode;
-                    entries.add(newEntry);
+                    db.getFriendCodeDao().insert(newEntry);
                 }
 
                 saving.postValue(false);

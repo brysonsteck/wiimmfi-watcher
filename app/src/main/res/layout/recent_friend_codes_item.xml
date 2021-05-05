@@ -9,10 +9,8 @@
         android:id="@+id/recent_friend_code_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:backgroundTint="#B3B3B3"
-        android:text="0000-0000-0000"
-        android:textColor="#383838"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,8 +15,8 @@ public class RoomData {
     ArrayList<Player> players = new ArrayList<>();
 
     public RoomData (ArrayList<Player> players, String playerLink, String friendCode) {
-        this.playerLink = getPlayerLink();
         this.friendCode = friendCode;
+        this.playerLink = getPlayerLink();
         Document doc = null;
 
         if (playerLink == null) {

@@ -4,12 +4,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableArrayList;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wiimmterfaceandroid.model.FriendCode;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.textview.MaterialTextView;
 
 import java.util.List;
 
@@ -27,13 +30,13 @@ public class RecentCodesAdapter extends RecyclerView.Adapter<RecentCodesAdapter.
 
     @NonNull
     @Override
-    public RecentCodesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recent_friend_codes_item, parent, false);
-        return new RecentCodesAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecentCodesAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Button fcButton = holder.itemView.findViewById(R.id.recent_friend_code_button);
         FriendCode currentFC = entries.get(position);
         fcButton.setText(currentFC.friendCode);
@@ -47,6 +50,7 @@ public class RecentCodesAdapter extends RecyclerView.Adapter<RecentCodesAdapter.
     public int getItemCount() {
         return entries.size();
     }
+
     class ViewHolder extends RecyclerView.ViewHolder {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

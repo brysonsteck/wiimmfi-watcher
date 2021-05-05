@@ -29,7 +29,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RecentCodesFragment extends Fragment {
 
     public RecentCodesFragment() {
-        super(R.layout.fragment_recent_friend_codes);
+
     }
     FriendCodeViewModel viewModel;
 
