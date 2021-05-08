@@ -1,4 +1,4 @@
-package com.example.wiimmterfaceandroid.wiimmfi;
+package me.brysonsteck.wiimmfiwatcher.wiimmfi;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -24,7 +24,9 @@ public class RoomData {
         } else {
 
             try {
-                doc = Jsoup.connect("https://wiimmfi.de/" + this.playerLink).get();
+                doc = Jsoup.connect("https://wiimmfi.de/" + this.playerLink)
+                        .userAgent("Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher) (UNDER DEVELOPMENT)")
+                        .get();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -91,7 +93,9 @@ public class RoomData {
         try {
             Document doc = null;
 
-            doc = Jsoup.connect("https://wiimmfi.de/stats/mkw").get();
+            doc = Jsoup.connect("https://wiimmfi.de/stats/mkw")
+                    .userAgent("Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher) (UNDER DEVELOPMENT)")
+                    .get();
             Element table = doc.select("table").get(0);
             Elements rows = table.select("tr");
 
@@ -126,8 +130,7 @@ public class RoomData {
     public RoomData refresh() {
         players.clear();
         roomHeader = "";
-        RoomData returningData = new RoomData(players, playerLink, friendCode);
-        return returningData;
+        return new RoomData(players, playerLink, friendCode);
     }
 }
 

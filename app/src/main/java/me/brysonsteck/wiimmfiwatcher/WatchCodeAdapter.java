@@ -1,19 +1,19 @@
-package com.example.wiimmterfaceandroid;
+package me.brysonsteck.wiimmfiwatcher;
 
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableArrayList;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wiimmterfaceandroid.model.FriendCode;
-import com.example.wiimmterfaceandroid.wiimmfi.WiimmfiActivity;
 import com.google.android.material.button.MaterialButton;
+
+import me.brysonsteck.wiimmfiwatcher.model.FriendCode;
+import me.brysonsteck.wiimmfiwatcher.wiimmfi.WiimmfiActivity;
 
 public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.ViewHolder>{
     ObservableArrayList<FriendCode> entries;

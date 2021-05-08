@@ -1,4 +1,4 @@
-package com.example.wiimmterfaceandroid.wiimmfi;
+package me.brysonsteck.wiimmfiwatcher.wiimmfi;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -6,20 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import org.jsoup.*;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wiimmterfaceandroid.R;
 import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.color.MaterialColors;
 
-import java.io.IOException;
+import org.jsoup.*;
+
 import java.util.ArrayList;
+
+import me.brysonsteck.wiimmfiwatcher.R;
 
 public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder>{
 

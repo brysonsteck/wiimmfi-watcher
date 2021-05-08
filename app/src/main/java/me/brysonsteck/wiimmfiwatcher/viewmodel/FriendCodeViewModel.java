@@ -1,23 +1,14 @@
-package com.example.wiimmterfaceandroid.viewmodel;
+package me.brysonsteck.wiimmfiwatcher.viewmodel;
 
 import android.app.Application;
 
-import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.MutableLiveData;
-
-import com.example.wiimmterfaceandroid.database.AppDatabase;
-import com.example.wiimmterfaceandroid.model.FriendCode;
-
 import androidx.databinding.ObservableArrayList;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 import androidx.room.Room;
-import androidx.room.RoomDatabase;
 
-import androidx.databinding.ObservableArrayList;
-
-import java.util.LinkedHashSet;
+import me.brysonsteck.wiimmfiwatcher.database.AppDatabase;
+import me.brysonsteck.wiimmfiwatcher.model.FriendCode;
 
 public class FriendCodeViewModel extends AndroidViewModel {
         ObservableArrayList<FriendCode> entries = new ObservableArrayList<>();

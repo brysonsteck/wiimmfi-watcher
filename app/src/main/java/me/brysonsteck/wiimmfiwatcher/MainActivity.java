@@ -1,18 +1,12 @@
-package com.example.wiimmterfaceandroid;
+package me.brysonsteck.wiimmfiwatcher;
 
-
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.ObservableArrayList;
-import androidx.fragment.app.FragmentContainerView;
-import androidx.room.Room;
 
 import android.os.Bundle;
 
-import com.example.wiimmterfaceandroid.database.AppDatabase;
-import com.example.wiimmterfaceandroid.model.FriendCode;
-
-import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.ObservableArrayList;
+import me.brysonsteck.wiimmfiwatcher.database.AppDatabase;
+import me.brysonsteck.wiimmfiwatcher.model.FriendCode;
 
 public class MainActivity extends AppCompatActivity {
     ObservableArrayList<FriendCode> recentFCList = new ObservableArrayList<>();

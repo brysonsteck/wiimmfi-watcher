@@ -7,8 +7,8 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.wiimmterfaceandroid"
-        minSdkVersion 29
+        applicationId "me.brysonsteck.wiimmfiwatcher"
+        minSdkVersion 22
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -31,7 +31,6 @@ android {
     }
 }
 
-
 dependencies {
     dependencies {
         dependencies {
@@ -43,7 +42,7 @@ dependencies {
             // LiveData
             implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
         }
-            def lifecycle_version = "2.3.1"
+        def lifecycle_version = "2.3.1"
         def arch_version = "2.1.0"
 
         // ViewModel

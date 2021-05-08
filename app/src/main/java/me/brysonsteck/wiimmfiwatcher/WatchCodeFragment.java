@@ -1,4 +1,4 @@
-package com.example.wiimmterfaceandroid;
+package me.brysonsteck.wiimmfiwatcher;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,10 +14,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wiimmterfaceandroid.model.FriendCode;
-import com.example.wiimmterfaceandroid.viewmodel.FriendCodeViewModel;
-import com.example.wiimmterfaceandroid.wiimmfi.WiimmfiActivity;
 import com.google.android.material.textview.MaterialTextView;
+
+import me.brysonsteck.wiimmfiwatcher.model.FriendCode;
+import me.brysonsteck.wiimmfiwatcher.viewmodel.FriendCodeViewModel;
+import me.brysonsteck.wiimmfiwatcher.wiimmfi.WiimmfiActivity;
 
 public class WatchCodeFragment extends Fragment {
 

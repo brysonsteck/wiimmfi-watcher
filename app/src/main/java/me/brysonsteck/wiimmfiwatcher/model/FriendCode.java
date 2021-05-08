@@ -1,4 +1,4 @@
-package com.example.wiimmterfaceandroid.model;
+package me.brysonsteck.wiimmfiwatcher.model;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

@@ -1,4 +1,4 @@
-package com.example.wiimmterfaceandroid;
+package me.brysonsteck.wiimmfiwatcher;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.wiimmterfaceandroid", appContext.getPackageName());
+        assertEquals("me.brysonsteck.wiimmfiwatcher", appContext.getPackageName());
     }
 }

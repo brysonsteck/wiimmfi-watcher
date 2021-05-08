@@ -1,26 +1,20 @@
-package com.example.wiimmterfaceandroid.wiimmfi;
+package me.brysonsteck.wiimmfiwatcher.wiimmfi;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.widget.TextView;
-
-import org.jsoup.*;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.room.Room;
 
-import com.example.wiimmterfaceandroid.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 
-import java.io.IOException;
+import org.jsoup.*;
+
 import java.util.ArrayList;
+
+import me.brysonsteck.wiimmfiwatcher.R;
 
 public class WiimmfiActivity extends AppCompatActivity {
     ArrayList<Player> players = new ArrayList<>();

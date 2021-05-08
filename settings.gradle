@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Wiimmterface Android"
+rootProject.name = "Wiimmfi Watcher"

@@ -1,4 +1,4 @@
-package com.example.wiimmterfaceandroid.wiimmfi;
+package me.brysonsteck.wiimmfiwatcher.wiimmfi;
 
 public class Player {
     String rosterNumber;

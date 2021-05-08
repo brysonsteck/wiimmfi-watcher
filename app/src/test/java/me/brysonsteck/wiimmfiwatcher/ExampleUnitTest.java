@@ -1,4 +1,4 @@
-package com.example.wiimmterfaceandroid;
+package me.brysonsteck.wiimmfiwatcher;
 
 import org.junit.Test;
 

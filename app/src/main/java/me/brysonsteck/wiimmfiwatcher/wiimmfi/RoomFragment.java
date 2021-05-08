@@ -1,4 +1,4 @@
-package com.example.wiimmterfaceandroid.wiimmfi;
+package me.brysonsteck.wiimmfiwatcher.wiimmfi;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,17 +10,18 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wiimmterfaceandroid.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+
+import me.brysonsteck.wiimmfiwatcher.R;
 
 public class RoomFragment extends Fragment {
     String display;
     String header;
     String playerLink;
     ArrayList<Player> players;
-        RoomData roomData;
+    RoomData roomData;
 
     public RoomFragment(String friendCode, String header, ArrayList<Player> players, String playerLink, String display) {
         super(R.layout.fragment_room);

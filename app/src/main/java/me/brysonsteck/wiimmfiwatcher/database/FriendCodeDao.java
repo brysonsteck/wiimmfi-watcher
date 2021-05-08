@@ -1,4 +1,4 @@
-package com.example.wiimmterfaceandroid.database;
+package me.brysonsteck.wiimmfiwatcher.database;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -6,9 +6,9 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.wiimmterfaceandroid.model.FriendCode;
-
 import java.util.List;
+
+import me.brysonsteck.wiimmfiwatcher.model.FriendCode;
 
 @Dao
 public interface FriendCodeDao {
