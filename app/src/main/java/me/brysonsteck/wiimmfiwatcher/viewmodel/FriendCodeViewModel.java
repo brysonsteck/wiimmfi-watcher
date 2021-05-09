@@ -1,6 +1,7 @@
 package me.brysonsteck.wiimmfiwatcher.viewmodel;
 
 import android.app.Application;
+import android.database.sqlite.SQLiteDatabase;
 
 import androidx.databinding.ObservableArrayList;
 import androidx.lifecycle.AndroidViewModel;
@@ -44,6 +45,13 @@ public class FriendCodeViewModel extends AndroidViewModel {
         public ObservableArrayList<FriendCode> getEntries() {
             return entries;
         }
+
+    public boolean deleteAll() {
+        for (FriendCode entry: entries) {
+            db.getFriendCodeDao().nukeTable();
+        }
+        return true;
+    }
 
         public void saveFriendCode(String name, String friendCode) {
             saving.setValue(true);

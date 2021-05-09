@@ -27,4 +27,8 @@ public interface FriendCodeDao {
 
     @Delete
     public void delete(FriendCode friendCode);
+
+    @Query("DELETE FROM friendcode")
+    public void nukeTable();
+
 }

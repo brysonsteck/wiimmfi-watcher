@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.textview.MaterialTextView;
 
 import me.brysonsteck.wiimmfiwatcher.model.FriendCode;
@@ -106,6 +107,7 @@ public class WatchCodeFragment extends Fragment {
                 }
             }
         });
+
 
 
     }

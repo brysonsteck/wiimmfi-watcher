@@ -44,6 +44,21 @@
             android:hapticFeedbackEnabled="false"
             app:layout_constraintTop_toBottomOf="@+id/friend_code_input_fragment" />
 
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="15dp"
+            android:foregroundTint="#FFFFFF"
+            android:text="Clear"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#1E88E5"
+            app:icon="@drawable/ic_baseline_clear_all_24"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
         <!-- Screen content -->
         <!-- Use app:layout_behavior="@string/appbar_scrolling_view_behavior" to fit below top app bar -->
 
