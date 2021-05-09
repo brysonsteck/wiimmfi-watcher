@@ -1,7 +1,9 @@
 package me.brysonsteck.wiimmfiwatcher;
 
 
+import android.content.ClipData;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.ObservableArrayList;
@@ -15,18 +17,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        FragmentContainerView fcInput = findViewById(R.id.room_fragment);
-//        this.database = Room.databaseBuilder(this, AppDatabase.class, "friend-codes-db").build();
-//        new Thread(() -> {
-//            try {
-//                Thread.sleep(1000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            recentFCList.addAll(database.getFriendCodeDao().getAll());
-//        }).start();
-
-
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
@@ -37,5 +27,15 @@ public class MainActivity extends AppCompatActivity {
 
         }
         setContentView(R.layout.activity_main);
+        View aboutButton = findViewById(R.id.about_button);
+
+        aboutButton.setOnClickListener((about) -> {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.friend_code_input_fragment, new AboutFragment(), null)
+                    .setReorderingAllowed(true)
+                    .addToBackStack(null)
+                    .commit();
+        });
+
     }
 }

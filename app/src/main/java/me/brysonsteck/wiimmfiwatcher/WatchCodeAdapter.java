@@ -12,20 +12,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.button.MaterialButton;
 
+import java.util.ArrayList;
+
 import me.brysonsteck.wiimmfiwatcher.model.FriendCode;
 import me.brysonsteck.wiimmfiwatcher.wiimmfi.WiimmfiActivity;
 
 public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.ViewHolder>{
     ObservableArrayList<FriendCode> entries;
-    OnFriendCodeClicked listener;
     Context context;
-    public interface OnFriendCodeClicked {
-        public void onClick(FriendCode entry);
-    }
+    ArrayList<String> recentCodes;
 
     public WatchCodeAdapter(Context context, ObservableArrayList<FriendCode> entries) {
         this.context = context;
         this.entries = entries;
+        this.recentCodes = new ArrayList<>();
     }
 
     @NonNull
@@ -37,15 +37,16 @@ public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        String currentFC = entries.get(position).friendCode;
         MaterialButton fcButton = holder.itemView.findViewById(R.id.recent_friend_code_button);
-        FriendCode currentFC = entries.get(position);
-        fcButton.setText(currentFC.friendCode);
+        fcButton.setText(currentFC);
         fcButton.setOnClickListener(view -> {
-                Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
-                intent.putExtra("friendCode", currentFC.friendCode);
-                context.startActivity(intent);
+            Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
+            intent.putExtra("friendCode", currentFC);
+            context.startActivity(intent);
         });
     }
+
 
     @Override
     public int getItemCount() {

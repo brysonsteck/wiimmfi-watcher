@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/favorite"
+        android:id="@+id/about_button"
         android:icon="@drawable/ic_baseline_info_24"
         android:title="About"
         app:showAsAction="ifRoom" />

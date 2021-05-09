@@ -27,7 +27,7 @@
                 android:background="@android:color/transparent"
                 android:elevation="0dp"
                 app:menu="@menu/top_app_bar"
-                app:title="Wiimmfi Friend Codes" />
+                app:title="Wiimmfi Watcher" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
