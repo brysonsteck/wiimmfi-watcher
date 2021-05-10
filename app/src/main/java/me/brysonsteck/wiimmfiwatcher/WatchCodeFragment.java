@@ -84,7 +84,10 @@ public class WatchCodeFragment extends Fragment {
             }
         });
         RecyclerView recyclerView = view.findViewById(R.id.recent_friend_codes_recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setReverseLayout(true);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
         Button watchButton = view.findViewById(R.id.watch_button);
         EditText friendCode = view.findViewById(R.id.friend_code_edit_text);
