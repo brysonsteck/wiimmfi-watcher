@@ -14,7 +14,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.textview.MaterialTextView;
 
 import me.brysonsteck.wiimmfiwatcher.model.FriendCode;
@@ -102,9 +101,6 @@ public class WatchCodeFragment extends Fragment {
                 } else {
                     errorText.setText("");
                     viewModel.saveFriendCode("", friendCode.getText().toString());
-//                    FriendCodeObj friendCodeObj = new FriendCodeObj();
-//                    friendCodeObj.friendCode = friendCode.getText().toString();
-//                    database.getFriendCodeDao().insert(friendCodeObj);
                     intent.putExtra("friendCode", friendCode.getText().toString());
                     startActivity(intent);
                 }

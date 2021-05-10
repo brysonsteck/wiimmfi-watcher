@@ -30,28 +30,16 @@ public class FriendCodeViewModel extends AndroidViewModel {
             }).start();
         }
 
-        public void setCurrentEntry(FriendCode entry) {
-            currentEntry.postValue(entry);
-        }
-
-        public MutableLiveData<FriendCode> getCurrentEntry() {
-            return currentEntry;
-        }
-
-        public MutableLiveData<Boolean> getSaving() {
-            return saving;
-        }
-
         public ObservableArrayList<FriendCode> getEntries() {
             return entries;
         }
 
-    public boolean deleteAll() {
-        for (FriendCode entry: entries) {
-            db.getFriendCodeDao().nukeTable();
-        }
-        return true;
-    }
+//    public boolean deleteAll() {
+//        for (FriendCode entry: entries) {
+//            db.getFriendCodeDao().nukeTable();
+//        }
+//        return true;
+//    }
 
         public void saveFriendCode(String name, String friendCode) {
             saving.setValue(true);
@@ -70,10 +58,10 @@ public class FriendCodeViewModel extends AndroidViewModel {
             }).start();
         }
 
-        public void deleteEntry(FriendCode entry) {
-            new Thread(() -> {
-                db.getFriendCodeDao().delete(entry);
-                entries.remove(entry);
-            }).start();
-        }
+//        public void deleteEntry(FriendCode entry) {
+//            new Thread(() -> {
+//                db.getFriendCodeDao().delete(entry);
+//                entries.remove(entry);
+//            }).start();
+//        }
     }

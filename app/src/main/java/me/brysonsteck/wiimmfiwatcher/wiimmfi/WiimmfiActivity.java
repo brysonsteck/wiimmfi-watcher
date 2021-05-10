@@ -41,7 +41,7 @@ public class WiimmfiActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.room_fragment, new RoomFragment(friendCode, roomHeader, players, playerLink[0], "fc"), null)
+                    .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "fc"), null)
                     .setReorderingAllowed(true)
                     .commit();
         }
@@ -54,49 +54,49 @@ public class WiimmfiActivity extends AppCompatActivity {
             if (menuItem.getItemId() == R.id.friend_code) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, roomHeader, players, playerLink[0], "fc"), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "fc"), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.roles) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, roomHeader, players, playerLink[0], "roles"), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "roles"), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.login_regions) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, roomHeader, players, playerLink[0], "login_regions"), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "login_regions"), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.room_match) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, roomHeader, players, playerLink[0], "room_match"), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "room_match"), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.world) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, roomHeader, players, playerLink[0], "world"), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "world"), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.conn_fail) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, roomHeader, players, playerLink[0], "conn_fail"), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "conn_fail"), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.vr_br) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, roomHeader, players, playerLink[0], "vr_br"), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "vr_br"), null)
                         .setReorderingAllowed(true)
                         .commit();
             }

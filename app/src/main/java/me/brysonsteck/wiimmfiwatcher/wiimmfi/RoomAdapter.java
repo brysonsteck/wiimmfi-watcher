@@ -19,12 +19,11 @@ import java.util.ArrayList;
 import me.brysonsteck.wiimmfiwatcher.R;
 
 public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder>{
-
     String display;
     String playerLink;
     String header;
     ArrayList<Player> players;
-    boolean online = true;
+
     public RoomAdapter (String display, String playerLink, String header, ArrayList<Player> players) {
         this.display = display;
         this.playerLink = playerLink;

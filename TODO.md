@@ -16,5 +16,9 @@ These are issues in Wiimmfi Watcher I am at least aware of. Please **DO NOT** su
 # Features I would like to add
 * The watcher activity does not refresh automatically like the official website does
     * Added a refresh button, but is there a better way with Jsoup? Like a new Thread?
+* Create a better looking header for the watcher activity
+    * Add 'sections' I guess???
+* Add the Mario Kart Wii font
+* Add pictures for Nintendo and CTGP tracks
 
 

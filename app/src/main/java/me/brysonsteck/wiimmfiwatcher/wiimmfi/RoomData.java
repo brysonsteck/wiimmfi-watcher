@@ -14,7 +14,7 @@ public class RoomData {
     String friendCode;
     ArrayList<Player> players = new ArrayList<>();
 
-    public RoomData (ArrayList<Player> players, String playerLink, String friendCode) {
+    public RoomData (ArrayList<Player> players, String friendCode) {
         this.friendCode = friendCode;
         getPlayerLink();
         Document doc = null;
@@ -91,10 +91,8 @@ public class RoomData {
 
     public void getPlayerLink() {
         try {
-            Document doc = null;
-
-            doc = Jsoup.connect("https://wiimmfi.de/stats/mkw")
-                    .userAgent("Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher) (UNDER DEVELOPMENT)")
+            Document doc = Jsoup.connect("https://wiimmfi.de/stats/mkw")
+                    .userAgent("Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher) (Developer testing)")
                     .get();
             Element table = doc.select("table").get(0);
             Elements rows = table.select("tr");
@@ -102,13 +100,11 @@ public class RoomData {
             for (int i = 0; i < rows.size(); i++) {
                 Element row = rows.get(i);
                 Elements colPlayers = row.select("td");
-                Elements colHeader = row.select("th");
 
 
                 if (colPlayers.size() > 0) {
 
                     String data = colPlayers.get(0).select("a").toString();
-//                                System.out.println(data);
                     if (data.contains(friendCode)) {
                         System.out.println("Found friend code");
                         playerLink = data.split("\"")[3];
@@ -130,7 +126,7 @@ public class RoomData {
     public RoomData refresh() {
         players.clear();
         roomHeader = "";
-        return new RoomData(players, playerLink, friendCode);
+        return new RoomData(players, friendCode);
     }
 }
 

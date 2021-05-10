@@ -23,9 +23,9 @@ public class RoomFragment extends Fragment {
     ArrayList<Player> players;
     RoomData roomData;
 
-    public RoomFragment(String friendCode, String header, ArrayList<Player> players, String playerLink, String display) {
+    public RoomFragment(String friendCode, ArrayList<Player> players, String playerLink, String display) {
         super(R.layout.fragment_room);
-        this.roomData = new RoomData(players, playerLink, friendCode);
+        this.roomData = new RoomData(players, friendCode);
         this.header = roomData.getRoomHeader();
         this.display = display;
         this.players = players;
@@ -52,8 +52,6 @@ public class RoomFragment extends Fragment {
             roomData = roomData.refresh();
             RoomData newRoomData = roomData.refresh();
             players = roomData.getPlayers();
-//            playerLink = roomData.getPlayerLink();
-//            String otherPlayerLink = newRoomData.getPlayerLink();
             header = newRoomData.getRoomHeader();
             if (header == null) {
                 header = "This player is not online, not inside a room or does not exist. Click the refresh button to try again, or click on the back button to enter a different friend code.";

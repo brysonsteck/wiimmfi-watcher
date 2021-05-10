@@ -2,7 +2,6 @@ package me.brysonsteck.wiimmfiwatcher;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TextView;
