@@ -92,7 +92,7 @@ public class RoomData {
     public void getPlayerLink() {
         try {
             Document doc = Jsoup.connect("https://wiimmfi.de/stats/mkw")
-                    .userAgent("Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher) (Developer testing)")
+                    .userAgent("Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher)")
                     .get();
             Element table = doc.select("table").get(0);
             Elements rows = table.select("tr");
