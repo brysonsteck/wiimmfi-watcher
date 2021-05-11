@@ -6,13 +6,13 @@ This application is currently being maintained by myself out of love for Mario K
 
 ## Screenshots
 
-![](sc-1.png)
-![](sc-2.png)
-![](sc-3.png)
-![](sc-4.png)
-![](sc-5.png)
-![](sc-6.png)
-![](sc-7.png)
+![](screenshots/sc-1.png)
+![](screenshots/sc-2.png)
+![](screenshots/sc-3.png)
+![](screenshots/sc-4.png)
+![](screenshots/sc-5.png)
+![](screenshots/sc-6.png)
+![](screenshots/sc-7.png)
 
 ## Download
 
