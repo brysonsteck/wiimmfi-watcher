@@ -6,11 +6,17 @@ This application is currently being maintained by myself out of love for Mario K
 
 ## Screenshots
 
-(Screenshots go here)
+![](sc-1.png)
+![](sc-2.png)
+![](sc-3.png)
+![](sc-4.png)
+![](sc-5.png)
+![](sc-6.png)
+![](sc-7.png)
 
 ## Download
 
-You can visit the Google Play Store to download the most recent and stable version (link). You are also free to clone the repository and download the source code for the most stable release in the Releases tab. 
+You can visit the Google Play Store to download the most recent and stable version (link goes here once approved). You are also free to clone the repository and download the source code for the most stable release in the Releases tab. 
 
 ## Feedback
 
@@ -18,4 +24,4 @@ This is officially my first project and Google Play app that I'm maintaining, so
 
 ## Bugs
 
-If you found any bugs in the `master` branch (i. e. the most recent Google Play release), **PLEASE READ MY TODO LIST FIRST** to make sure that the bug you found isn't something I'm already aware of. Once you have made sure of that, you can then create an issue or fill out this Google Form. (Link the new Google form)
+If you found any bugs in the `master` branch (i. e. the most recent Google Play release), **PLEASE READ MY [TODO LIST](https://github.com/brysonsteck/wiimmfi-watcher/blob/dev/TODO.md) FIRST** to make sure that the bug you found isn't something I'm already aware of. Once you have made sure of that, you can then create an issue or fill out this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd6qCONAP2tsbHPgzu_CdZcHVHL5nx7q0XFqrVfExEc84kqUQ/viewform).

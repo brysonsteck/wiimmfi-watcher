@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
 }
 
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -81,3 +82,4 @@ dependencies {
 
     }
 }
+android.buildTypes.release.ndk.debugSymbolLevel = 'FULL'
