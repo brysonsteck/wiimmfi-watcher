@@ -25,3 +25,7 @@ This is officially my first project and Google Play app that I'm maintaining, so
 ## Bugs
 
 If you found any bugs in the `master` branch (i. e. the most recent Google Play release), **PLEASE READ MY [TODO LIST](https://github.com/brysonsteck/wiimmfi-watcher/blob/dev/TODO.md) FIRST** to make sure that the bug you found isn't something I'm already aware of. Once you have made sure of that, you can then create an issue or fill out this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd6qCONAP2tsbHPgzu_CdZcHVHL5nx7q0XFqrVfExEc84kqUQ/viewform).
+
+## Software
+
+Wiimmfi Watcher is made possible using the Jsoup HTML parser, version 1.13.1. You can visit their website [here.](jsoup.org) 
