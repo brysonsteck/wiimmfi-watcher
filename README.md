@@ -36,3 +36,9 @@ Since this application is free and the code is open source, I do not receive inc
 * Dogecoin: DMx362YBEBYw1uDGetX3svdg8RypHsWTCS
 
 You can also donate to the Wiimmfi service [here.]() Without them, this app wouldn't exist. Again, donating to Wiimmfi is not required to use this app nor does it add or remove functionality from the app.
+
+## Credits
+
+Wiimmfi Watcher is made possible by the following:
+* [Jsoup](https://jsoup.org) HTML parser, version 1.13.1 
+
