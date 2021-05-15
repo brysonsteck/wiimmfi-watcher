@@ -25,3 +25,14 @@ This is officially my first project and Google Play app that I'm maintaining, so
 ## Bugs
 
 If you found any bugs in the `master` branch (i. e. the most recent Google Play release), **PLEASE READ MY [TODO LIST](https://github.com/brysonsteck/wiimmfi-watcher/blob/dev/TODO.md) FIRST** to make sure that the bug you found isn't something I'm already aware of. Once you have made sure of that, you can then create an issue or fill out this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd6qCONAP2tsbHPgzu_CdZcHVHL5nx7q0XFqrVfExEc84kqUQ/viewform).
+
+## Donations
+
+Since this application is free and the code is open source, I do not receive income from maintaining this app. Because of that, I'd appreciate any donations! Donating is not required to use the app and does not add or remove functionality from the app.
+* PayPal: @bryzinga
+* Venmo: @brysonsteck
+* Bitcoin: 1Kbnp5JMTKd7a3Zs2WWm2JMCjfVb5tpcky
+* Litecoin: LRboJVNzoJCjXHmwN6RQgyvYEQjjaFzEA7
+* Dogecoin: DMx362YBEBYw1uDGetX3svdg8RypHsWTCS
+
+You can also donate to the Wiimmfi service [here.]() Without them, this app wouldn't exist. Again, donating to Wiimmfi is not required to use this app nor does it add or remove functionality from the app.

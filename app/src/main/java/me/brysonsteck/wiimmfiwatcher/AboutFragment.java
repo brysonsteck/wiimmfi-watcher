@@ -32,7 +32,6 @@ public class AboutFragment extends Fragment {
         TextView aboutWatcher = view.findViewById(R.id.about_watcher_text);
         TextView aboutMe = view.findViewById(R.id.about_me_text);
         TextView github = view.findViewById(R.id.github_text);
-        TextView donations = view.findViewById(R.id.donations_text);
         TextView contact = view.findViewById(R.id.contact_text);
         TextView bugs = view.findViewById(R.id.bugs_text);
 
@@ -49,13 +48,6 @@ public class AboutFragment extends Fragment {
         github.setMovementMethod(LinkMovementMethod.getInstance());
 
         github.setText(R.string.github);
-
-        donations.setText("Since this application is free and the code is open source, I do not receive income from maintaining this app. Because of that, I'd appreciate any donation in the following methods:\n\n" +
-                "PayPal: @bryzinga\n" +
-                "Venmo: @brysonsteck\n" +
-                "Bitcoin: 1Kbnp5JMTKd7a3Zs2WWm2JMCjfVb5tpcky\n" +
-                "Litecoin: LRboJVNzoJCjXHmwN6RQgyvYEQjjaFzEA7\n" +
-                "Dogecoin: DMx362YBEBYw1uDGetX3svdg8RypHsWTCS");
 
         contact.setText("If you would like to get ahold of me for any reason unrelated to bug reports or this app in general, you can contact me through email at steck.bryson@gmail.com " +
                 "or on Discord at bryzinga#9971.");
