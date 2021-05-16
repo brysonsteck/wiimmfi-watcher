@@ -28,14 +28,17 @@ If you found any bugs in the `master` branch (i. e. the most recent Google Play 
 
 ## Donations
 
-Since this application is free and the code is open source, I do not receive income from maintaining this app. Because of that, I'd appreciate any donations! Donating is not required to use the app and does not add or remove functionality from the app.
-* PayPal: @bryzinga
-* Venmo: @brysonsteck
+This application is completely free, ad-less and open source. That means that no income is coming from this app and the work done on this app is purely a labor of love <3
+
+If you'd like to donate to this project, I'd ask that you first [donate to Wiimmfi.](https://wiimmfi.de/donate) This app nor my 3,069+ hours of fun on their service would not be possible without them.
+
+Once you donate to them or you choose not to (why?? :( ), then here are ways you can donate to me:
+* [PayPal](https://www.paypal.com/donate/?business=steck.bryson%40gmail.com&item_name=Bryson+Steck&currency_code=USD&Z3JncnB0=)
 * Bitcoin: 1Kbnp5JMTKd7a3Zs2WWm2JMCjfVb5tpcky
 * Litecoin: LRboJVNzoJCjXHmwN6RQgyvYEQjjaFzEA7
 * Dogecoin: DMx362YBEBYw1uDGetX3svdg8RypHsWTCS
 
-You can also donate to the Wiimmfi service [here.]() Without them, this app wouldn't exist. Again, donating to Wiimmfi is not required to use this app nor does it add or remove functionality from the app.
+Please note that donations are **NOT** required and does **NOT** add or remove functionality from the app.
 
 ## Credits
 
