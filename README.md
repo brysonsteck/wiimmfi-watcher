@@ -26,6 +26,14 @@ This is officially my first project and Google Play app that I'm maintaining, so
 
 If you found any bugs in the `master` branch (i. e. the most recent Google Play release), **PLEASE READ MY [TODO LIST](https://github.com/brysonsteck/wiimmfi-watcher/blob/dev/TODO.md) FIRST** to make sure that the bug you found isn't something I'm already aware of. Once you have made sure of that, you can then create an issue or fill out this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd6qCONAP2tsbHPgzu_CdZcHVHL5nx7q0XFqrVfExEc84kqUQ/viewform).
 
+## Devices
+
+Wiimmfi Watcher has been officially tested and confirmed to work on the following devices:
+* x86_64 emulated Pixel 4 (Android 5.0.2) by brysonsteck
+* x86_64 emulated Pixel 4 (Android 11) by brysonsteck
+* x86_64 emulated Nexus 7 (Android 10) by brysonsteck
+* x86_64 emulated Nexus 10 (Android 10) by brysonsteck
+
 ## Donations
 
 This application is completely free, ad-less and open source. That means that no income is coming from this app and the work done on this app is purely a labor of love <3

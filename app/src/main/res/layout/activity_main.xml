@@ -24,10 +24,10 @@
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@android:color/transparent"
                 android:elevation="0dp"
                 app:menu="@menu/top_app_bar"
-                app:title="Wiimmfi Watcher" />
+                app:title="Wiimmfi Watcher"
+                app:titleTextColor="@color/white" />
 
         </com.google.android.material.appbar.AppBarLayout>
 

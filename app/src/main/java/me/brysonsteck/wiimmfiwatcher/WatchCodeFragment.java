@@ -1,10 +1,15 @@
 package me.brysonsteck.wiimmfiwatcher;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.transition.TransitionInflater;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,7 +28,7 @@ import me.brysonsteck.wiimmfiwatcher.wiimmfi.WiimmfiActivity;
 public class WatchCodeFragment extends Fragment {
 
     public WatchCodeFragment() {
-        super(R.layout.friend_code_input_fragment);
+        super(R.layout.watch_code_fragment);
     }
 
     public boolean isValidFriendCode(String friendCode) {
@@ -39,6 +44,15 @@ public class WatchCodeFragment extends Fragment {
         }
         return valid;
     }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        TransitionInflater inflater = TransitionInflater.from(requireContext());
+        setEnterTransition(inflater.inflateTransition(R.transition.fade));
+        setExitTransition(inflater.inflateTransition(R.transition.fade));
+    }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -88,26 +102,58 @@ public class WatchCodeFragment extends Fragment {
         linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
-        Button watchButton = view.findViewById(R.id.watch_button);
         EditText friendCode = view.findViewById(R.id.friend_code_edit_text);
+
         MaterialTextView errorText = view.findViewById(R.id.error_text);
-        watchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
-                if (!isValidFriendCode(friendCode.getText().toString())) {
-                    errorText.setText("ERROR: Insert a friend code in the format XXXX-XXXX-XXXX");
-                    friendCode.setText("");
-                } else {
-                    errorText.setText("");
-                    viewModel.saveFriendCode("", friendCode.getText().toString());
-                    intent.putExtra("friendCode", friendCode.getText().toString());
-                    startActivity(intent);
+        Button watchButton = view.findViewById(R.id.watch_button);
+        watchButton.setOnClickListener(buttonClick -> {
+            startWiimmfiActivity(
+                    view,
+                    friendCode,
+                    errorText,
+                    watchButton,
+                    viewModel
+            );
+            watchButton.setText("Watch");
+        });
+        friendCode.setOnKeyListener(new View.OnKeyListener()
+        {
+            public boolean onKey(View view1, int keyCode, KeyEvent event)
+            {
+                if (event.getAction() == KeyEvent.ACTION_DOWN)
+                {
+                    switch (keyCode)
+                    {
+                        case KeyEvent.KEYCODE_DPAD_CENTER:
+                        case KeyEvent.KEYCODE_ENTER:
+                            startWiimmfiActivity(
+                                    view,
+                                    friendCode,
+                                    errorText,
+                                    watchButton,
+                                    viewModel
+                            );
+                            watchButton.setText("Watch");
+                            return true;
+                        default:
+                            break;
+                    }
                 }
+                return false;
             }
         });
+    }
 
-
-
+    public void startWiimmfiActivity(View view, EditText friendCode, MaterialTextView errorText, Button watchButton, FriendCodeViewModel viewModel) {
+        Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
+        if (!isValidFriendCode(friendCode.getText().toString())) {
+            errorText.setText("ERROR: Insert a friend code in the format XXXX-XXXX-XXXX");
+        } else {
+            errorText.setText("");
+            watchButton.setText("Loading...");
+            viewModel.saveFriendCode("", friendCode.getText().toString());
+            intent.putExtra("friendCode", friendCode.getText().toString());
+            startActivity(intent);
+        }
     }
 }

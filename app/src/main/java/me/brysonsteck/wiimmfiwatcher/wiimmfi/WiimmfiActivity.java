@@ -1,6 +1,8 @@
 package me.brysonsteck.wiimmfiwatcher.wiimmfi;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.StrictMode;
 
@@ -36,6 +38,14 @@ public class WiimmfiActivity extends AppCompatActivity {
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView drawer = findViewById(R.id.navigation_view);
+
+        int nightModeFlags =
+                this.getResources().getConfiguration().uiMode &
+                        Configuration.UI_MODE_NIGHT_MASK;
+        if (nightModeFlags == Configuration.UI_MODE_NIGHT_YES) {
+            // Night mode is active, we're using dark theme
+            drawer.setBackgroundColor(Color.parseColor("#313131"));
+        }
 
         toolbar.setTitle("Watching " + friendCode);
 

@@ -1,8 +1,10 @@
 package me.brysonsteck.wiimmfiwatcher.wiimmfi;
 
 import android.os.Bundle;
+import android.os.Looper;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,9 +26,11 @@ public class RoomFragment extends Fragment {
     RoomData roomData;
 
     public RoomFragment(String friendCode, ArrayList<Player> players, String playerLink, String display) {
-        super(R.layout.fragment_room);
+        super(R.layout.room_fragment);
         this.roomData = new RoomData(players, friendCode);
-        this.header = roomData.getRoomHeader();
+        new Thread(() -> {
+            this.header = roomData.getRoomHeader();
+        }).start();
         this.display = display;
         this.players = players;
         this.playerLink = playerLink;
@@ -43,23 +47,23 @@ public class RoomFragment extends Fragment {
         headerTextView.setText(header);
         RecyclerView recyclerView = view.findViewById(R.id.player_data_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new RoomAdapter(display, playerLink, header, players));
+        recyclerView.setAdapter(new RoomAdapter(display, playerLink, header, players, getContext()));
 
         refreshButton.setOnClickListener((buttonView) -> {
-            refreshButton.setEnabled(false);
-            players.clear();
+            this.players.clear();
             this.header = "";
-            roomData = roomData.refresh();
+            this.roomData = roomData.refresh();
             RoomData newRoomData = roomData.refresh();
-            players = roomData.getPlayers();
+            this.players = roomData.getPlayers();
             header = newRoomData.getRoomHeader();
             if (header == null) {
                 header = "This player is not online, not inside a room or does not exist. Click the refresh button to try again, or click on the back button to enter a different friend code.";
             }
-            headerTextView.setText(header);
+
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-            recyclerView.setAdapter(new RoomAdapter(display, playerLink, header, players));
-            refreshButton.setEnabled(true);
+            recyclerView.setAdapter(new RoomAdapter(display, playerLink, header, players, getContext()));
+            headerTextView.setText(header);
+
         });
     }
 }

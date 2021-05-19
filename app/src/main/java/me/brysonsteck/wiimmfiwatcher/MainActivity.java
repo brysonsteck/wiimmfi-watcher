@@ -1,8 +1,10 @@
 package me.brysonsteck.wiimmfiwatcher;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.ObservableArrayList;
 import androidx.room.Room;
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     ObservableArrayList<FriendCode> recentFCList = new ObservableArrayList<>();
     AppDatabase database;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         aboutButton.setOnClickListener((about) -> {
             aboutButton.setVisibility(View.INVISIBLE);
             getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(
+                            R.anim.slide_in,
+                            R.anim.fade_out,
+                            R.anim.fade_in,
+                            R.anim.slide_out)
                     .replace(R.id.friend_code_input_fragment, new AboutFragment(), null)
                     .setReorderingAllowed(true)
                     .addToBackStack(null)

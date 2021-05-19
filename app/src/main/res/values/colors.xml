@@ -5,6 +5,7 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="blue_200">#42A5F5</color>
     <color name="black">#FF000000</color>
+    <color name="backgroundNight">#151515</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue_700">#1E88E5</color>
     <color name="blue_900">#0D47A1</color>

@@ -2,6 +2,8 @@ package me.brysonsteck.wiimmfiwatcher;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +41,13 @@ public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String currentFC = entries.get(position).friendCode;
         MaterialButton fcButton = holder.itemView.findViewById(R.id.recent_friend_code_button);
+        int nightModeFlags =
+                context.getResources().getConfiguration().uiMode &
+                        Configuration.UI_MODE_NIGHT_MASK;
+        if (nightModeFlags == Configuration.UI_MODE_NIGHT_YES) {
+            // Night mode is active, we're using dark theme
+            fcButton.setBackgroundColor(Color.parseColor("#313131"));
+        }
         fcButton.setText(currentFC);
         fcButton.setOnClickListener(view -> {
             Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
