@@ -18,11 +18,11 @@ This application is currently being maintained by myself out of love for Mario K
 
 ## Download
 
-You can visit the Google Play Store to download the most recent and stable version (link goes here once approved). You are also free to clone the repository and download the source code for the most stable release in the Releases tab. 
+You can visit the Google Play Store to download the most recent and stable version (link goes here once approved). You are also free to clone the repository and download the source code for the most stable release in the Releases tab if you would like to build it from scratch.
 
 ## Feedback
 
-This is officially my first project and Google Play app that I'm maintaining, so if you have any feedback about my work, I would love to hear it! You can create an issue tagged "feedback", or you can fill out this Google Form. (Create google form) I also have a section in my TODO list under "Features I would like to add" for things I am already considering adding to future releases.
+This is officially my first project and Google Play app that I'm maintaining, so if you have any feedback about my work, I would love to hear it! You can create an issue tagged "feedback", or you can fill out this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd6qCONAP2tsbHPgzu_CdZcHVHL5nx7q0XFqrVfExEc84kqUQ/viewform). I also have a section in my TODO list under "Features I would like to add" for things I am already considering adding to future releases.
 
 ## Bugs
 
