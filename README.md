@@ -35,6 +35,8 @@ Wiimmfi Watcher has been officially tested and confirmed to work on the followin
 * x86_64 emulated Pixel 4 (Android 11) by brysonsteck
 * x86_64 emulated Nexus 7 (Android 10) by brysonsteck
 * x86_64 emulated Nexus 10 (Android 10) by brysonsteck
+* x86_64 emulated Nexus 7 (Android 5.0.2) by brysonsteck
+* x86_64 emulated Nexus 10 (Android 5.0.2) by brysonsteck
 
 ## Donations
 
