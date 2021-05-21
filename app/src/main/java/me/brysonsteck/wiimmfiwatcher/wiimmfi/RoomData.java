@@ -8,11 +8,14 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import me.brysonsteck.wiimmfiwatcher.BuildConfig;
+
 public class RoomData {
     String roomHeader;
     String playerLink;
     String friendCode;
     ArrayList<Player> players = new ArrayList<>();
+    String userAgent = "Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher) Version " + BuildConfig.VERSION_NAME;
 
     public RoomData (ArrayList<Player> players, String friendCode) {
         this.friendCode = friendCode;
@@ -24,8 +27,9 @@ public class RoomData {
         } else {
 
             try {
+                System.out.println(userAgent);
                 doc = Jsoup.connect("https://wiimmfi.de/" + this.playerLink)
-                        .userAgent("Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher) (UNDER DEVELOPMENT)")
+                        .userAgent(userAgent)
                         .get();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -92,7 +96,7 @@ public class RoomData {
     public void getPlayerLink() {
         try {
             Document doc = Jsoup.connect("https://wiimmfi.de/stats/mkw")
-                    .userAgent("Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher)")
+                    .userAgent(userAgent)
                     .get();
             Element table = doc.select("table").get(0);
             Elements rows = table.select("tr");
