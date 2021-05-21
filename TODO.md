@@ -1,3 +1,6 @@
+# This TODO list is out of date!
+This list is not accurate. Instead, checkout the TODO list on the `dev` branch [here,](https://github.com/brysonsteck/wiimmfi-watcher/blob/dev/TODO.md) which is updated as development progresses. This file here on the `master` branch is here to show what progress is being/has been made at the time of each release.
+
 # TODO
 These are issues in Wiimmfi Watcher I am at least aware of. Please **DO NOT** submit a bug report on the Google Form or an issue here on GitHub if it is mentioned on this list, unless you found a way that the bug can crash the app.
 
