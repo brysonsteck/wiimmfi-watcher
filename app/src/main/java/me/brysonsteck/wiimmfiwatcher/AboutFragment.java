@@ -59,14 +59,9 @@ public class AboutFragment extends Fragment {
         TextView bugs = view.findViewById(R.id.bugs_text);
         TextView license = view.findViewById(R.id.license_text);
 
-        aboutWatcher.setText("Wiimmfi Watcher is an UNOFFICIAL application created for a school project that I have decided to turn into a full application. " +
-                "This application was made to provide an easy shortcut to the Wiimmfi website and display data in a mobile friendly way, since the official website doesn't have a mobile friendly version. " +
-                "Free and open source, you can watch your Wiimmfi matches on your phone in a quick and easy way. " +
-                "");
+        aboutWatcher.setText(R.string.about_watcher);
 
-        aboutMe.setText("Hi there! My name is Bryson Steck. I am a student studying Computer Science. This is my first official application that I'm maintaining. " +
-                "This whole \"application on the Google Play Store\" thing is new to me, so please be patient as I am learning how to maintain something like this. " +
-                "I hope you enjoy!");
+        aboutMe.setText(R.string.about_me);
 
         github.setClickable(true);
         github.setMovementMethod(LinkMovementMethod.getInstance());

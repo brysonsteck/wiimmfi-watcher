@@ -14,20 +14,21 @@ public class RoomData {
     String roomHeader;
     String playerLink;
     String friendCode;
+    Exception error;
     ArrayList<Player> players = new ArrayList<>();
     String userAgent = "Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher) Version " + BuildConfig.VERSION_NAME;
 
     public RoomData (ArrayList<Player> players, String friendCode) {
         this.friendCode = friendCode;
-        getPlayerLink();
+        error = getPlayerLink();
         Document doc = null;
 
         if (this.playerLink == null) {
-            System.out.println("The player link is null for some reason");
+            System.out.println("The player link is null for some reason:");
+            System.out.println(error);
         } else {
 
             try {
-                System.out.println(userAgent);
                 doc = Jsoup.connect("https://wiimmfi.de/" + this.playerLink)
                         .userAgent(userAgent)
                         .get();
@@ -93,7 +94,7 @@ public class RoomData {
         }
     }
 
-    public void getPlayerLink() {
+    public Exception getPlayerLink() {
         try {
             Document doc = Jsoup.connect("https://wiimmfi.de/stats/mkw")
                     .userAgent(userAgent)
@@ -117,10 +118,12 @@ public class RoomData {
                     }
                 }
             }
+            return null;
 
 
         } catch (Exception e) {
             e.printStackTrace();
+            return e;
         }
     }
     public ArrayList<Player> getPlayers() { return players; }

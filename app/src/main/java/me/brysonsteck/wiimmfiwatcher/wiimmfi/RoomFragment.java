@@ -14,7 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import me.brysonsteck.wiimmfiwatcher.R;
 
@@ -44,6 +46,13 @@ public class RoomFragment extends Fragment {
         if (header == null) {
             header = "This player is not online, not inside a room or does not exist. Click the refresh button to try again, or click on the back button to enter a different friend code.";
         }
+        if (roomData.error != null) {
+            header = "Wiimmfi Watcher was unable to connect to the Wiimmfi servers. This could be that you are not connected to the internet, but it could be something else. Here was the error:\n\n" +
+                    roomData.error.getMessage() + "\n\n" +
+                    "If the error is along the lines of \"Unable to resolve host\" or \"Timeout\", you are probably having internet issues. Make sure you are connected to the internet then click the refresh button or press back to watch a new friend code.\n\n" +
+                    "If the error is something other than that or if the error persists, make sure that Wiimmfi's website is currently running. Otherwise, please screenshot this screen and submit a bug report by clicking the About icon on the main page.";
+
+        }
         headerTextView.setText(header);
         RecyclerView recyclerView = view.findViewById(R.id.player_data_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -58,6 +67,12 @@ public class RoomFragment extends Fragment {
             header = newRoomData.getRoomHeader();
             if (header == null) {
                 header = "This player is not online, not inside a room or does not exist. Click the refresh button to try again, or click on the back button to enter a different friend code.";
+            }
+            if (newRoomData.error instanceof java.net.SocketTimeoutException || newRoomData.error instanceof java.net.UnknownHostException) {
+                header = "Wiimmfi Watcher was unable to connect to the Wiimmfi servers. This could be that you are not connected to the internet, but it could be something else. Here was the error:\n\n" +
+                        roomData.error.getMessage() + "\n\n" +
+                        "If the error is along the lines of \"Unable to resolve host\" or \"Timeout\", you are probably having internet issues. Make sure you are connected to the internet then click the refresh button or press back to watch a new friend code.\n\n" +
+                        "If the error is something other than that or if the error persists, make sure that Wiimmfi's website is currently running. Otherwise, please screenshot this screen and submit a bug report by clicking the About icon on the main page.";
             }
 
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
