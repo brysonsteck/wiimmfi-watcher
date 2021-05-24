@@ -89,6 +89,18 @@
             app:layout_constraintTop_toBottomOf="@+id/github_text" />
 
         <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/version_header"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.448"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/license_text" />
+
+        <TextView
             android:id="@+id/contact_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -112,11 +124,20 @@
             android:id="@+id/license_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:paddingBottom="65dp"
+            android:paddingBottom="15dp"
             android:text="TextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/version_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="65dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/textView13"

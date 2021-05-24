@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.transition.TransitionInflater;
 import android.view.View;
@@ -15,8 +17,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.appbar.MaterialToolbar;
-
-import java.util.Objects;
 
 public class AboutFragment extends Fragment {
     View aboutButton;
@@ -58,6 +58,7 @@ public class AboutFragment extends Fragment {
         TextView contact = view.findViewById(R.id.contact_text);
         TextView bugs = view.findViewById(R.id.bugs_text);
         TextView license = view.findViewById(R.id.license_text);
+        TextView version = view.findViewById(R.id.version_text);
 
         aboutWatcher.setText(R.string.about_watcher);
 
@@ -82,6 +83,13 @@ public class AboutFragment extends Fragment {
         license.setMovementMethod(LinkMovementMethod.getInstance());
 
         license.setText(R.string.license);
+
+        version.setClickable(true);
+        version.setMovementMethod(LinkMovementMethod.getInstance());
+
+        Spanned version_text = Html.fromHtml(getResources().getString(R.string.version, BuildConfig.VERSION_NAME));
+
+        version.setText(version_text);
     }
 
     @Override

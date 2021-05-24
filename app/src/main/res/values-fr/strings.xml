@@ -25,17 +25,16 @@
     <string name="jsoup_error">Oups! Wiimmfi Watcher n\'a pas pu se connecter aux serveurs Wiimmfi. Cela peut être dû au fait que vous n\'êtes pas connecté à Internet, mais cela peut être autre chose. Voici l\'erreur:\n\n%1$s\n\nSi l\'erreur est du type «Unable to resolve host» ou «Timeout», vous rencontrez probablement des problèmes Internet. Assurez-vous que vous êtes connecté à Internet, puis cliquez sur le bouton d\'actualisation ou appuyez sur retour pour regarder un nouveau code ami.\n\nSi l\'erreur est autre que cela ou si l\'erreur persiste, assurez-vous que le site Web de Wiimmfi est en cours d\'exécution. Sinon, veuillez capturer cet écran et soumettre un rapport de bogue en cliquant sur l\'icône À propos de la page principale.</string>
     <string name="github">Tout le code de ce projet est open source sur mon référentiel GitHub <a href="https://github.com/brysonsteck/wiimmfi-watcher/tree/master">ici.</a> Vous êtes libre d\'utiliser ce code et de le développer sous la <a href='https://github.com/brysonsteck/wiimmfi-watcher/tree/master/LICENSE'>licence publique générale GNU</a> (version 3).</string>
     <string name="bugs">En parlant de bugs, avez-vous trouvé un bogue? Souhaitez-vous faire part de vos commentaires sur l\'application? J\'adorerais l\'entendre! Tout d\'abord, assurez-vous que le problème que vous avez trouvé ne figure pas dans ma <a href='https://github.com/brysonsteck/wiimmfi-watcher/blob/master/TODO.md'>liste de tâches.</a> Il est possible que j\'en sois déjà conscient ou que j\'y travaille. Si votre problème n\'est pas traité dans la liste des tâches, vous pouvez créer un problème sur mon référentiel GitHub <a href='https://github.com/brysonsteck/wiimmfi-watcher/issues'>ici.</a> Si vous ne savez pas comment utiliser GitHub, vous pouvez remplir ce <a href='https://docs.google.com/forms/d/e/1FAIpQLSd6qCONAP2tsbHPgzu_CdZcHVHL5nx7q0XFqrVfExEc84kqUQ/viewform?usp=sf_link'>formulaire Google</a> à la place.</string>
-    <string name="license">&#169; Copyright 2021 Bryson Steck Wiimmfi Watcher est disponible sous la licence publique générale GNU version 3. Vous pouvez consulter la licence ici.\n\nWiimmfi Watcher is free software: you can redistribute it and/or modify
+    <string name="license">&#169; Copyright 2021 Bryson Steck\n\nWiimmfi Watcher est disponible sous la licence publique générale GNU version 3. Vous pouvez consulter la licence <a href='https://github.com/brysonsteck/wiimmfi-watcher/tree/master/LICENSE'>ici.</a>\n\nWiimmfi Watcher is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.\n\n
-
-    Wiimmfi Watcher is distributed in the hope that it will be useful,
+    (at your option) any later version.\n\nWiimmfi Watcher is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.\n\n
-
-    You should have received a copy of the GNU General Public License
+    GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License
     along with Wiimmfi Watcher. If not, see &lt;<a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>&gt;.</string>
     <string name="contact">Si vous souhaitez me contacter pour une raison non liée aux rapports de bogues ou à cette application en général, vous pouvez me contacter par e-mail à <a href="mailto:steck.bryson@gmail.com">steck.bryson@gmail.com</a> ou sur Discord à bryzinga#9971.</string>
+    <string name="version_header">Version</string>
+    <string name="version">Vous exécutez la version %1$s de Wiimmfi Watcher. Vous pouvez consulter les notes de publication de cette version <![CDATA[<a href="https://github.com/brysonsteck/wiimmfi-watcher/releases/">ici.</a>]]></string>
+
 </resources>
