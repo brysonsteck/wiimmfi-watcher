@@ -4,38 +4,38 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/friend_code"
-            android:title="Friend Codes"
+            android:title="@string/friend_code"
             android:icon="@drawable/ic_baseline_person_24"
             android:checked="true"
             />
         <item
             android:id="@+id/roles"
-            android:title="Roles"
+            android:title="@string/roles"
             android:icon="@drawable/ic_baseline_assignment_ind_24"
             />
         <item
             android:id="@+id/login_regions"
-            android:title="Login Regions"
+            android:title="@string/login_regions"
             android:icon="@drawable/ic_baseline_login_24"
             />
         <item
             android:id="@+id/room_match"
-            android:title="Room, Match"
+            android:title="@string/room_match"
             android:icon="@drawable/ic_baseline_meeting_room_24"
             />
         <item
             android:id="@+id/world"
-            android:title="World"
+            android:title="@string/world"
             android:icon="@drawable/ic_baseline_public_24"
             />
         <item
             android:id="@+id/conn_fail"
-            android:title="Connection Fail"
+            android:title="@string/conn_fail"
             android:icon="@drawable/ic_baseline_warning_24"
             />
         <item
             android:id="@+id/vr_br"
-            android:title="VR / BR"
+            android:title="@string/vr_br"
             android:icon="@drawable/ic_baseline_thumbs_up_down_24"
             />
     </group>

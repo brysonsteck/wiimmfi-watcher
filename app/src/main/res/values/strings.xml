@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Wiimmfi</string>
 <!--  About Fragment strings  -->
+    <string name="about_fragment_title">About Wiimmfi Watcher</string>
     <string name="about_me">Hi there! My name is Bryson Steck. I am a student studying Computer Science. This is my first official application that I\'m maintaining. This whole \"application on the Google Play Store\" thing is new to me, so please be patient as I am learning how to maintain something like this. I hope you enjoy!</string>
     <string name="about_watcher">Wiimmfi Watcher is an UNOFFICIAL application created for a school project that I have decided to turn into a full application. This application was made to provide an easy shortcut to the Wiimmfi website and display data in a mobile friendly way, since the official website doesn\'t have a mobile friendly version. Free and open source, you can watch your Wiimmfi matches on your phone in a quick and easy way. </string>
     <string name="github">All of the code in this project is open source on my GitHub repository <a href='https://github.com/brysonsteck/wiimmfi-watcher/tree/master'>here.</a> You are free to use this code and expand upon it under the <a href='https://github.com/brysonsteck/wiimmfi-watcher/tree/master/LICENSE'>GNU General Public License</a> (Version 3).</string>
@@ -14,4 +15,30 @@
     GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License
     along with Wiimmfi Watcher.  If not, see &lt;<a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>&gt;.</string>
     <string name="contact">If you would like to get a hold of me for any reason unrelated to bug reports or this app in general, you can contact me through email at <a href='mailto:steck.bryson@gmail.com'>steck.bryson@gmail.com</a> or on Discord at bryzinga#9971.</string>
+
+    <string name="watch">Watch</string>
+    <string name="watching">Watching %1$s</string>
+    <string name="enter_fc">Enter a friend code to watch</string>
+    <string name="recent_fc">Recently watched friend codes:</string>
+
+    <string name="about_watcher_header">About Wiimmfi Watcher</string>
+    <string name="about_me_header">About Me</string>
+    <string name="github_header" translatable="false">GitHub</string>
+    <string name="contact_header">Contact</string>
+    <string name="bugs_header">Bugs and Feedback</string>
+    <string name="license_header">License and Copyright</string>
+
+    <string name="player_details">Player Details</string>
+    <string name="friend_code">Friend Codes</string>
+    <string name="roles">Roles</string>
+    <string name="login_regions">Login Regions</string>
+    <string name="room_match">Room, Match</string>
+    <string name="world">World</string>
+    <string name="conn_fail">Connection Fail</string>
+    <string name="vr_br">VR / BR</string>
+
+    <string name="error_fc_syntax">ERROR: Insert a friend code in the format XXXX-XXXX-XXXX</string>
+
+    <string name="header_null_error">This player is not online, not inside a room or does not exist. Click the refresh button to try again, or click on the back button to enter a different friend code.</string>
+    <string name="jsoup_error">Whoops! Wiimmfi Watcher was unable to connect to the Wiimmfi servers. This could be that you are not connected to the internet, but it could be something else. Here was the error:\n\n%1$s\n\nIf the error is along the lines of \"Unable to resolve host\" or \"Timeout\", you are probably having internet issues. Make sure you are connected to the internet then click the refresh button or press back to watch a new friend code.\n\nIf the error is something other than that or if the error persists, make sure that Wiimmfi\'s website is currently running. Otherwise, please screenshot this screen and submit a bug report by clicking the About icon on the main page.</string>
 </resources>

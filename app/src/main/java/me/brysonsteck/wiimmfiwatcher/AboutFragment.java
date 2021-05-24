@@ -50,7 +50,7 @@ public class AboutFragment extends Fragment {
 
         aboutButton = getActivity().findViewById(R.id.about_button);
         toolbar = getActivity().findViewById(R.id.toolbar);
-        toolbar.setTitle("About Wiimmfi Watcher");
+        toolbar.setTitle(R.string.about_fragment_title);
 
         TextView aboutWatcher = view.findViewById(R.id.about_watcher_text);
         TextView aboutMe = view.findViewById(R.id.about_me_text);
@@ -94,7 +94,7 @@ public class AboutFragment extends Fragment {
     public void onResume() {
         super.onResume();
         aboutButton.setVisibility(View.INVISIBLE);
-        toolbar.setTitle("About Wiimmfi Watcher");
+        toolbar.setTitle(R.string.about_fragment_title);
     }
 
 }

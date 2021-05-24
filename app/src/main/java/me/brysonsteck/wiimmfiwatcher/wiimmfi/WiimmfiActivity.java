@@ -22,7 +22,6 @@ public class WiimmfiActivity extends AppCompatActivity {
     ArrayList<Player> players = new ArrayList<>();
     final String[] playerLink = new String[1];
     String friendCode;
-    String roomHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +46,7 @@ public class WiimmfiActivity extends AppCompatActivity {
             drawer.setBackgroundColor(Color.parseColor("#313131"));
         }
 
-        toolbar.setTitle("Watching " + friendCode);
+        toolbar.setTitle(getResources().getString(R.string.watching, friendCode));
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()

@@ -114,7 +114,7 @@ public class WatchCodeFragment extends Fragment {
                     watchButton,
                     viewModel
             );
-            watchButton.setText("Watch");
+            watchButton.setText(R.string.watch);
         });
         friendCode.setOnKeyListener(new View.OnKeyListener()
         {
@@ -133,7 +133,6 @@ public class WatchCodeFragment extends Fragment {
                                     watchButton,
                                     viewModel
                             );
-                            watchButton.setText("Watch");
                             return true;
                         default:
                             break;
@@ -147,10 +146,9 @@ public class WatchCodeFragment extends Fragment {
     public void startWiimmfiActivity(View view, EditText friendCode, MaterialTextView errorText, Button watchButton, FriendCodeViewModel viewModel) {
         Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
         if (!isValidFriendCode(friendCode.getText().toString())) {
-            errorText.setText("ERROR: Insert a friend code in the format XXXX-XXXX-XXXX");
+            errorText.setText(R.string.error_fc_syntax);
         } else {
             errorText.setText("");
-            watchButton.setText("Loading...");
             viewModel.saveFriendCode("", friendCode.getText().toString());
             intent.putExtra("friendCode", friendCode.getText().toString());
             startActivity(intent);

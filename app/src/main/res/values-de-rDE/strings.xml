@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wiimmfi</string>
+    <string name="about_fragment_title">Über Wiimmfi Watcher</string>
+    <string name="about_me">Hallo! Ich heiße Bryson Steck. Ich bin ein Student, der Informatik studiert. Dies ist meine erste offizielle Bewerbung, die ich pflege. Diese ganze \"Anwendung im Google Play Store\" ist für mich neu. Bitte haben Sie etwas Geduld, während ich lerne, wie man so etwas pflegt. Ich hoffe es gefällt dir!</string>
+    <string name="about_watcher">Wiimmfi Watcher ist eine inoffizielle Anwendung für ein Schulprojekt erstellt, dass ich beschlossen habe, in eine volle Anwendung zu aktivieren. Diese Anwendung wurde macht eine einfache Verknüpfung zu der Wiimmfi Website und Anzeigedaten in einer mobilen freundlichen Art und Weise zur Verfügung zu stellen, da die offizielle Website nicht über eine Mobilfunkversion. Kostenlos und Open Source können Sie Ihre Wiimmfi-Spiele schnell und einfach auf Ihrem Handy ansehen.</string>
+    <string name="github">Der gesamte Code in diesem Projekt ist Open Source in meinem GitHub-Repository <a href="https://github.com/brysonsteck/wiimmfi-watcher/tree/master">hier.</a> Sie können diesen Code verwenden, um Code und erweitern Sie ihn unter der <a href="https://github.com/brysonsteck/wiimmfi-watcher/tree/master/LICENSE"> GNU General Public License </a> (Version 3).</string>
+    <string name="bugs">Apropos Fehler, haben Sie einen Fehler gefunden? Möchten Sie Feedback zur App geben? Ich würde es gerne hören! Stellen Sie zunächst sicher, dass das gefundene Problem nicht in meiner Aufgabenliste aufgeführt ist. Es ist möglich, dass ich es bereits weiß oder daran arbeite. Wenn Ihr Problem nicht in der Aufgabenliste behandelt wird, können Sie hier ein Problem in meinem GitHub-Repository erstellen. Wenn Sie nicht wissen, wie man GitHub verwendet, können Sie stattdessen dieses Google-Formular ausfüllen.</string>
+    <string name="contact">Wenn Sie mich aus irgendeinem Grund erreichen möchten, der nichts mit Fehlerberichten oder dieser App im Allgemeinen zu tun hat, können Sie mich per E-Mail unter <a href="mailto:steck.bryson@gmail.com">steck.bryson@gmail.com</a> oder auf Discord unter bryzinga#9971.</string>
+    <string name="license">&#169; Copyright 2021 Bryson Steck\n\nWiimmfi Watcher ist unter der GNU General Public License Version 3 verfügbar. Sie können die Lizenz <a href = 'https://github.com/brysonsteck/wiimmfi-watcher/tree/master/LICENSE'>hier.</a>\n\nWiimmfi Watcher is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nWiimmfi Watcher is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with Wiimmfi Watcher.  If not, see &lt;<a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>&gt;.\n\nWiimmfi Watcher ist Freie Software: Sie können es unter den Bedingungen der GNU General Public License, wie von der Free Software Foundation, Version 3 der Lizenz oder (nach Ihrer Wahl) jeder neueren veröffentlichten Version, weiter verteilen und/oder modifizieren.\n\nWiimmfi Watcher wird in der Hoffnung bereitgestellt, dass es nützlich sein wird, jedoch OHNE JEDE GEWÄHR,; sogar ohne die implizite Gewähr der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK. Siehe die GNU General Public License für weitere Einzelheiten.\n\nSie sollten eine Kopie der GNU General Public License zusammen mit diesem Programm erhalten haben. Wenn nicht, siehe &lt;<a href='https://www.gnu.org/licenses/'>https://www.gnu.org/licenses/</a>&gt;.</string>
+    <string name="watch">Uhr</string>
+    <string name="enter_fc">Geben Sie einen Freundescode ein, um ihn anzusehen</string>
+    <string name="recent_fc">Kürzlich gesehene Freundescodes:</string>
+    <string name="friend_code">Freundescodes</string>
+    <string name="roles">Rollen</string>
+    <string name="login_regions">Login-Regionen</string>
+    <string name="room_match">Zimmer, Streichholz</string>
+    <string name="world">Welt</string>
+    <string name="conn_fail">Verbindung fehlgeschlagen</string>
+    <string name="vr_br">VR / BR</string>
+    <string name="error_fc_syntax">FEHLER: Geben Sie einen Freundescode im Format XXXX-XXXX-XXXX ein</string>
+    <string name="header_null_error">Dieser Player ist nicht online, befindet sich nicht in einem Raum oder existiert nicht. Klicken Sie auf die Schaltfläche \"Aktualisieren\", um es erneut zu versuchen, oder klicken Sie auf die Schaltfläche \"Zurück\", um einen anderen Freundescode einzugeben.</string>
+    <string name="jsoup_error">Hoppla! Wiimmfi Watcher konnte keine Verbindung zu den Wiimmfi-Servern herstellen. Dies kann sein, dass Sie nicht mit dem Internet verbunden sind, aber es könnte etwas anderes sein. Hier war der Fehler:\n\n%1$s\n\nWenn der Fehler im Sinne von \"Unable to resolve host\" oder \"Timeout\" auftritt, haben Sie wahrscheinlich Internetprobleme. Stellen Sie sicher, dass Sie mit dem Internet verbunden sind, und klicken Sie dann auf die Schaltfläche \"Aktualisieren\" oder drücken Sie zurück, um einen neuen Freundescode anzuzeigen.\n\nWenn der Fehler etwas anderes ist oder wenn der Fehler weiterhin besteht, stellen Sie sicher, dass die Wiimmfi-Website derzeit ausgeführt wird. Andernfalls machen Sie bitte einen Screenshot dieses Bildschirms und senden Sie einen Fehlerbericht, indem Sie auf der Hauptseite auf das Info-Symbol klicken.</string>
+    <string name="watching">Beobachten %1$s</string>
+    <string name="player_details">Spielerdetails</string>
+    <string name="about_watcher_header">Über Wiimmfi Watcher</string>
+    <string name="about_me_header">Über mich</string>
+    <string name="contact_header">Kontakt</string>
+    <string name="bugs_header">Fehler und Feedback</string>
+    <string name="license_header">Lizenz und Copyright</string>
+</resources>
