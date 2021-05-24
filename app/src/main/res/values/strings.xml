@@ -35,7 +35,7 @@
     <string name="room_match">Room, Match</string>
     <string name="world">World</string>
     <string name="conn_fail">Connection Fail</string>
-    <string name="vr_br">VR / BR</string>
+    <string name="vr_br" translatable="false">VR / BR</string>
 
     <string name="error_fc_syntax">ERROR: Insert a friend code in the format XXXX-XXXX-XXXX</string>
 

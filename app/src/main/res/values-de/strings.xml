@@ -17,7 +17,6 @@
     <string name="room_match">Zimmer, Streichholz</string>
     <string name="world">Welt</string>
     <string name="conn_fail">Verbindung fehlgeschlagen</string>
-    <string name="vr_br">VR / BR</string>
     <string name="error_fc_syntax">FEHLER: Geben Sie einen Freundescode im Format XXXX-XXXX-XXXX ein</string>
     <string name="header_null_error">Dieser Player ist nicht online, befindet sich nicht in einem Raum oder existiert nicht. Klicken Sie auf die Schaltfläche \"Aktualisieren\", um es erneut zu versuchen, oder klicken Sie auf die Schaltfläche \"Zurück\", um einen anderen Freundescode einzugeben.</string>
     <string name="jsoup_error">Hoppla! Wiimmfi Watcher konnte keine Verbindung zu den Wiimmfi-Servern herstellen. Dies kann sein, dass Sie nicht mit dem Internet verbunden sind, aber es könnte etwas anderes sein. Hier war der Fehler:\n\n%1$s\n\nWenn der Fehler im Sinne von \"Unable to resolve host\" oder \"Timeout\" auftritt, haben Sie wahrscheinlich Internetprobleme. Stellen Sie sicher, dass Sie mit dem Internet verbunden sind, und klicken Sie dann auf die Schaltfläche \"Aktualisieren\" oder drücken Sie zurück, um einen neuen Freundescode anzuzeigen.\n\nWenn der Fehler etwas anderes ist oder wenn der Fehler weiterhin besteht, stellen Sie sicher, dass die Wiimmfi-Website derzeit ausgeführt wird. Andernfalls machen Sie bitte einen Screenshot dieses Bildschirms und senden Sie einen Fehlerbericht, indem Sie auf der Hauptseite auf das Info-Symbol klicken.</string>

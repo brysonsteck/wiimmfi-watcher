@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.net.UnknownHostException;
@@ -26,8 +27,9 @@ public class RoomFragment extends Fragment {
     String playerLink;
     ArrayList<Player> players;
     RoomData roomData;
+    MaterialToolbar toolbar;
 
-    public RoomFragment(String friendCode, ArrayList<Player> players, String playerLink, String display) {
+    public RoomFragment(String friendCode, ArrayList<Player> players, String playerLink, String display, MaterialToolbar toolbar) {
         super(R.layout.room_fragment);
         this.roomData = new RoomData(players, friendCode);
         new Thread(() -> {
@@ -36,7 +38,7 @@ public class RoomFragment extends Fragment {
         this.display = display;
         this.players = players;
         this.playerLink = playerLink;
-
+        this.toolbar = toolbar;
     }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -45,13 +47,15 @@ public class RoomFragment extends Fragment {
         TextView headerTextView = view.findViewById(R.id.room_header_text);
         if (header == null) {
             headerTextView.setText(R.string.header_null_error);
+            toolbar.setNavigationIcon(null);
         }
         if (roomData.error != null) {
             headerTextView.setText(getResources().getString(R.string.jsoup_error, roomData.error));
-
+            toolbar.setNavigationIcon(null);
         }
         if (roomData.error == null && header != null) {
             headerTextView.setText(header);
+            toolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24);
         }
         RecyclerView recyclerView = view.findViewById(R.id.player_data_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -66,12 +70,15 @@ public class RoomFragment extends Fragment {
             header = newRoomData.getRoomHeader();
             if (header == null) {
                 headerTextView.setText(R.string.header_null_error);
+                toolbar.setNavigationIcon(null);
             }
             if (newRoomData.error instanceof java.net.SocketTimeoutException || newRoomData.error instanceof java.net.UnknownHostException) {
                 headerTextView.setText(R.string.jsoup_error);
+                toolbar.setNavigationIcon(null);
             }
             if (roomData.error == null && header != null) {
                 headerTextView.setText(header);
+                toolbar.setNavigationIcon(R.drawable.ic_baseline_menu_24);
             }
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
             recyclerView.setAdapter(new RoomAdapter(display, playerLink, header, players, getContext()));
