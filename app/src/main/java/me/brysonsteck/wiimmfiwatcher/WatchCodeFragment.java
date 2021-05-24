@@ -1,15 +1,14 @@
 package me.brysonsteck.wiimmfiwatcher;
 
 import android.content.Intent;
-import android.content.res.Configuration;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.transition.TransitionInflater;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -151,6 +150,11 @@ public class WatchCodeFragment extends Fragment {
             errorText.setText("");
             viewModel.saveFriendCode("", friendCode.getText().toString());
             intent.putExtra("friendCode", friendCode.getText().toString());
+            ProgressBar p = view.findViewById(R.id.progressBar1);
+            if(p.getVisibility() != View.GONE){ // check if it is visible
+                p.setVisibility(View.GONE); // if not set it to visible
+                watchButton.setVisibility(View.VISIBLE); // use 1 or 2 as parameters.. arg0 is the view(your button) from the onclick listener
+            }
             startActivity(intent);
         }
     }

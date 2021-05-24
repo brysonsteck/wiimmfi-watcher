@@ -6,14 +6,11 @@ import android.view.View;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.ObservableArrayList;
 import androidx.room.Room;
 
 import me.brysonsteck.wiimmfiwatcher.database.AppDatabase;
-import me.brysonsteck.wiimmfiwatcher.model.FriendCode;
 
 public class MainActivity extends AppCompatActivity {
-    ObservableArrayList<FriendCode> recentFCList = new ObservableArrayList<>();
     AppDatabase database;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -29,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.friend_code_input_fragment, new WatchCodeFragment(), null)
                     .setReorderingAllowed(true)
                     .commit();
-
-
         }
 
         database = Room.databaseBuilder(this, AppDatabase.class, "friend-codes-db").build();

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wiimmfi</string>
+    <string name="about_fragment_title">Sobre Wiimmfi Watcher</string>
+    <string name="about_me">Olá! Meu nome é Bryson Steck. Eu sou um estudante de Ciência da Computação. Este é meu primeiro aplicativo oficial que mantenho. Toda essa coisa de \"aplicativo na Google Play Store\" é nova para mim, então, seja paciente, pois estou aprendendo a manter algo assim. Espero que você goste!</string>
+    <string name="about_watcher">Wiimmfi Watcher é um aplicativo NÃO OFICIAL criado para um projeto escolar que decidi transformar em um aplicativo completo. Este aplicativo foi feito para fornecer um atalho fácil para o site Wiimmfi e exibir os dados de uma forma amigável para mobile, uma vez que o site oficial não possui uma versão mobile friendly. Gratuito e de código aberto, você pode assistir às partidas do Wiimmfi no seu telefone de maneira rápida e fácil.</string>
+    <string name="watch">Ver</string>
+    <string name="watching">Assistindo %1$s</string>
+    <string name="enter_fc">Digite um código de amigo para assistir</string>
+    <string name="recent_fc">Códigos de amigos assistidos recentemente:</string>
+    <string name="version_header">Versão</string>
+    <string name="version">Você está executando o Wiimmfi Watcher versão %1$s. Você pode ver as notas de lançamento desta versão <![CDATA[<a href="https://github.com/brysonsteck/wiimmfi-watcher/releases/">aqui.</a>]]></string>
+    <string name="about_watcher_header">Sobre Wiimmfi Watcher</string>
+    <string name="about_me_header">Sobre mim</string>
+    <string name="contact_header">Contato</string>
+    <string name="bugs_header">Bugs e feedback</string>
+    <string name="license_header">Licença e Copyright</string>
+    <string name="player_details">Detalhes do jogador</string>
+    <string name="friend_code">Códigos de Amigo</string>
+    <string name="roles">Funções</string>
+    <string name="login_regions">Regiões de login</string>
+    <string name="room_match">Sala, jogo</string>
+    <string name="world">Mundo</string>
+    <string name="conn_fail">Falha de conexão</string>
+    <string name="error_fc_syntax">ERRO: Insira um código de amigo no formato XXXX-XXXX-XXXX</string>
+    <string name="header_null_error">Este jogador não está online, não está dentro de uma sala ou não existe. Clique no botão Atualizar para tentar novamente ou clique no botão Voltar para inserir um código de amigo diferente.</string>
+    <string name="jsoup_error">Opa! Wiimmfi Watcher não conseguiu se conectar aos servidores Wiimmfi. Pode ser que você não esteja conectado à Internet, mas pode ser outra coisa. Aqui estava o erro:\n\n%1$s\n\nSe o erro for semelhante a \"Unable to resolve host\" ou \"Timeout\", provavelmente você está tendo problemas de Internet. Certifique-se de que está conectado à Internet e clique no botão Atualizar ou pressione Voltar para assistir a um novo código de amigo.\n\nSe o erro for diferente disso ou se o erro persistir, certifique-se de que o site do Wiimmfi esteja em execução. Caso contrário, faça uma captura de tela desta tela e envie um relatório de bug clicando no ícone Sobre na página principal.</string>
+    <string name="github">Todo o código neste projeto é de código aberto no meu repositório GitHub <a href="https://github.com/brysonsteck/wiimmfi-watcher/tree/master">aqui.</a> Você é livre para usar este código e expandi-lo sob a <a href='https://github.com/brysonsteck/wiimmfi-watcher/tree/master/LICENSE'>Licença Pública Geral GNU</a> (Versão 3).</string>
+    <string name="bugs">Falando em bugs, você encontrou um bug? Quer fornecer feedback sobre o aplicativo? Eu adoraria ouvir isso! Primeiro, certifique-se de que o problema que você encontrou não está listado na minha <a href='https://github.com/brysonsteck/wiimmfi-watcher/blob/master/TODO.md'>lista de tarefas</a>. É possível que eu já esteja ciente ou trabalhando nisso. Se o seu problema não for abordado na lista de tarefas, você pode criar um problema no meu repositório GitHub <a href='https://github.com/brysonsteck/wiimmfi-watcher/issues'>aqui.</a>. Se você não sabe como usar o GitHub, pode preencher este <a href='https://docs.google.com/forms/d/e/1FAIpQLSd6qCONAP2tsbHPgzu_CdZcHVHL5nx7q0XFqrVfExEc84kqUQ/viewform?usp=sf_link'>Formulário Google.</a></string>
+    <string name="license">&#169; Copyright 2021 Bryson Steck\n\nWiimmfi Watcher está disponível sob a Licença Pública Geral GNU Versão 3. Você pode visualizar a licença <a href="https://github.com/brysonsteck/wiimmfi-watcher/tree/master/LICENSE">aqui.</a>\n\nWiimmfi Watcher is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nWiimmfi Watcher is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with Wiimmfi Watcher. If not, see &lt;<a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>&gt;.</string>
+    <string name="contact">Se você quiser entrar em contato comigo por qualquer motivo não relacionado a relatórios de bugs ou a este aplicativo em geral, pode entrar em contato comigo por e-mail <a href='mailto:steck.bryson@gmail.com'>steck.bryson@gmail.com</a> ou no Discord em bryzinga#9971.</string>
+</resources>
