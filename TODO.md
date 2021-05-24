@@ -4,12 +4,11 @@ This list is not accurate. Instead, checkout the TODO list on the `dev` branch [
 # TODO
 These are issues in Wiimmfi Watcher I am at least aware of. Please **DO NOT** submit a bug report on the Google Form or an issue here on GitHub if it is mentioned on this list, unless you found a way that the bug can crash the app.
 
-## Completed For Release 1.1.1
-* Made the user agent consistant across both Jsoup calls
-* Added a new error if Jsoup throws an exception
+## Completed For Release 1.1.2
+* Added language translations for German, French, Italian and Japanese.
+* Added a "Version" section in the about page.
 
 ## Working On
-* Providing translations for major languages (German, France, Spanish at the moment)
 
 ## Aware Of
 * The about page causes part of the screen to get cut off as the animation plays
