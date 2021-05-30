@@ -13,6 +13,7 @@ import androidx.databinding.ObservableArrayList;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
 
@@ -22,11 +23,13 @@ import me.brysonsteck.wiimmfiwatcher.wiimmfi.WiimmfiActivity;
 public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.ViewHolder>{
     ObservableArrayList<FriendCode> entries;
     Context context;
+    MaterialTextView errorText;
     ArrayList<String> recentCodes;
 
-    public WatchCodeAdapter(Context context, ObservableArrayList<FriendCode> entries) {
+    public WatchCodeAdapter(Context context, ObservableArrayList<FriendCode> entries, MaterialTextView errorText) {
         this.context = context;
         this.entries = entries;
+        this.errorText = errorText;
         this.recentCodes = new ArrayList<>();
     }
 
@@ -50,6 +53,7 @@ public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.View
         }
         fcButton.setText(currentFC);
         fcButton.setOnClickListener(view -> {
+            errorText.setText("");
             Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
             intent.putExtra("friendCode", currentFC);
             context.startActivity(intent);

@@ -61,7 +61,8 @@ public class WatchCodeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         FriendCodeViewModel viewModel = new ViewModelProvider(getActivity()).get(FriendCodeViewModel.class);
 
-        WatchCodeAdapter adapter = new WatchCodeAdapter(getContext(), viewModel.getEntries());
+        MaterialTextView errorText = view.findViewById(R.id.error_text);
+        WatchCodeAdapter adapter = new WatchCodeAdapter(getContext(), viewModel.getEntries(), errorText);
         viewModel.getEntries().addOnListChangedCallback(new ObservableList.OnListChangedCallback<ObservableList<FriendCode>>() {
             @Override
             public void onChanged(ObservableList<FriendCode> sender) {
@@ -106,7 +107,6 @@ public class WatchCodeFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         EditText friendCode = view.findViewById(R.id.friend_code_edit_text);
-        MaterialTextView errorText = view.findViewById(R.id.error_text);
         Button watchButton = view.findViewById(R.id.watch_button);
         watchButton.setOnClickListener(buttonClick -> {
             startWiimmfiActivity(
