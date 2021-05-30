@@ -73,7 +73,7 @@ public class RoomFragment extends Fragment {
                 toolbar.setNavigationIcon(null);
             }
             if (newRoomData.error instanceof java.net.SocketTimeoutException || newRoomData.error instanceof java.net.UnknownHostException) {
-                headerTextView.setText(R.string.jsoup_error);
+                headerTextView.setText(getResources().getString(R.string.jsoup_error, roomData.error));
                 toolbar.setNavigationIcon(null);
             }
             if (roomData.error == null && header != null) {
