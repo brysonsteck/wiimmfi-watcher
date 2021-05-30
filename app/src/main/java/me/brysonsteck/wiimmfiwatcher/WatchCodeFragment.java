@@ -12,6 +12,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.OnApplyWindowInsetsListener;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.ObservableList;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -77,7 +80,7 @@ public class WatchCodeFragment extends Fragment {
             @Override
             public void onItemRangeInserted(ObservableList<FriendCode> sender, int positionStart, int itemCount) {
                 getActivity().runOnUiThread(() -> {
-                    adapter.notifyItemRangeInserted(positionStart, itemCount);
+                    adapter.notifyItemRangeInserted(positionStart, itemCount); // this is the only method that seems to be called
                 });
             }
 
@@ -101,8 +104,8 @@ public class WatchCodeFragment extends Fragment {
         linearLayoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
-        EditText friendCode = view.findViewById(R.id.friend_code_edit_text);
 
+        EditText friendCode = view.findViewById(R.id.friend_code_edit_text);
         MaterialTextView errorText = view.findViewById(R.id.error_text);
         Button watchButton = view.findViewById(R.id.watch_button);
         watchButton.setOnClickListener(buttonClick -> {
