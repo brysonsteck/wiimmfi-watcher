@@ -29,4 +29,5 @@
     <string name="contact">バグレポートやこのアプリ全般とは関係のない理由で私を捕まえたい場合は、電子メール<a href='mailto:steck.bryson@gmail.com'>（steck.bryson@gmail.com）</a>またはDiscord（bryzinga＃9971）で私に連絡できます。</string>
     <string name="version_header">バージョン</string>
     <string name="version">Wiimmfi Watcherバージョン%1$sを実行しています。このバージョンのリリースノートは<![CDATA[<a href="https://github.com/brysonsteck/wiimmfi-watcher/releases/">こちら</a>]]>でご覧いただけます。</string>
+    <string name="locating_text">%1$sの検索…</string>
 </resources>

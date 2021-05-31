@@ -1,5 +1,6 @@
 package me.brysonsteck.wiimmfiwatcher;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.transition.TransitionInflater;
@@ -8,13 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.view.OnApplyWindowInsetsListener;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.ObservableList;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -28,6 +25,7 @@ import me.brysonsteck.wiimmfiwatcher.viewmodel.FriendCodeViewModel;
 import me.brysonsteck.wiimmfiwatcher.wiimmfi.WiimmfiActivity;
 
 public class WatchCodeFragment extends Fragment {
+    ProgressDialog progressBar;
 
     public WatchCodeFragment() {
         super(R.layout.watch_code_fragment);
@@ -60,9 +58,10 @@ public class WatchCodeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         FriendCodeViewModel viewModel = new ViewModelProvider(getActivity()).get(FriendCodeViewModel.class);
+        progressBar = new ProgressDialog(getContext(), R.style.AppCompatAlertDialogStyle);
 
         MaterialTextView errorText = view.findViewById(R.id.error_text);
-        WatchCodeAdapter adapter = new WatchCodeAdapter(getContext(), viewModel.getEntries(), errorText);
+        WatchCodeAdapter adapter = new WatchCodeAdapter(getContext(), viewModel.getEntries(), errorText, progressBar);
         viewModel.getEntries().addOnListChangedCallback(new ObservableList.OnListChangedCallback<ObservableList<FriendCode>>() {
             @Override
             public void onChanged(ObservableList<FriendCode> sender) {
@@ -145,11 +144,22 @@ public class WatchCodeFragment extends Fragment {
         });
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (progressBar.isShowing()) { progressBar.dismiss(); }
+    }
+
     public void startWiimmfiActivity(View view, EditText friendCode, MaterialTextView errorText, Button watchButton, FriendCodeViewModel viewModel) {
         Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
         if (!isValidFriendCode(friendCode.getText().toString())) {
             errorText.setText(R.string.error_fc_syntax);
         } else {
+            progressBar.setCancelable(false);
+            progressBar.setMessage(getResources().getString(R.string.locating_text, friendCode.getText()));
+            progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressBar.show();
+
             errorText.setText("");
             viewModel.saveFriendCode("", friendCode.getText().toString());
             intent.putExtra("friendCode", friendCode.getText().toString());

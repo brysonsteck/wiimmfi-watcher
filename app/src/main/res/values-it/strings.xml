@@ -29,4 +29,5 @@
     <string name="jsoup_error">Ops! Wiimmfi Watcher non è riuscito a connettersi ai server Wiimmfi. Potrebbe essere che non sei connesso a Internet, ma potrebbe essere qualcos\'altro. Ecco l\'errore:  %1$s  Se l\'errore è sulla falsariga di \"Unable to resolve host\" o \"Timeout\", probabilmente si sta avendo problemi di internet. Assicurati di essere connesso a Internet, quindi fai clic sul pulsante di aggiornamento o premi Indietro per guardare un nuovo codice amico.  Se l\'errore è diverso da quello o se l\'errore persiste, assicurati che il sito Web di Wiimmfi sia attualmente in esecuzione. Altrimenti, fai uno screenshot di questa schermata e invia una segnalazione di bug facendo clic sull\'icona Informazioni sulla pagina principale.</string>
     <string name="version_header">Versione</string>
     <string name="version">Stai eseguendo Wiimmfi Watcher versione %1$s. È possibile visualizzare le note di rilascio per questa versione <![CDATA[<a href="https://github.com/brysonsteck/wiimmfi-watcher/releases/">qui.</a>]]></string>
+    <string name="locating_text">Individuazione %1$s…</string>
 </resources>

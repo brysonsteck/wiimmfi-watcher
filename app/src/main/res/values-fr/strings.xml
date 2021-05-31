@@ -36,5 +36,6 @@
     <string name="contact">Si vous souhaitez me contacter pour une raison non liée aux rapports de bogues ou à cette application en général, vous pouvez me contacter par e-mail à <a href="mailto:steck.bryson@gmail.com">steck.bryson@gmail.com</a> ou sur Discord à bryzinga#9971.</string>
     <string name="version_header">Version</string>
     <string name="version">Vous exécutez la version %1$s de Wiimmfi Watcher. Vous pouvez consulter les notes de publication de cette version <![CDATA[<a href="https://github.com/brysonsteck/wiimmfi-watcher/releases/">ici.</a>]]></string>
+    <string name="locating_text">Localisation de %1$s…</string>
 
 </resources>

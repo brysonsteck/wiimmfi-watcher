@@ -1,5 +1,6 @@
 package me.brysonsteck.wiimmfiwatcher;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -24,12 +25,15 @@ public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.View
     ObservableArrayList<FriendCode> entries;
     Context context;
     MaterialTextView errorText;
+    ProgressDialog progressBar;
     ArrayList<String> recentCodes;
 
-    public WatchCodeAdapter(Context context, ObservableArrayList<FriendCode> entries, MaterialTextView errorText) {
+    public WatchCodeAdapter(Context context, ObservableArrayList<FriendCode> entries,
+                            MaterialTextView errorText, ProgressDialog progressBar) {
         this.context = context;
         this.entries = entries;
         this.errorText = errorText;
+        this.progressBar = progressBar;
         this.recentCodes = new ArrayList<>();
     }
 
@@ -53,6 +57,12 @@ public class WatchCodeAdapter extends RecyclerView.Adapter<WatchCodeAdapter.View
         }
         fcButton.setText(currentFC);
         fcButton.setOnClickListener(view -> {
+            progressBar.setCancelable(true);
+            progressBar.setMessage(holder.itemView.getResources().getString(R.string.locating_text, currentFC));
+            progressBar.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressBar.setProgress(0);
+            progressBar.setMax(100);
+            progressBar.show();
             errorText.setText("");
             Intent intent = new Intent(view.getContext(), WiimmfiActivity.class);
             intent.putExtra("friendCode", currentFC);

@@ -3,7 +3,6 @@ package me.brysonsteck.wiimmfiwatcher;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
 
 import androidx.annotation.RequiresApi;
@@ -47,5 +46,9 @@ public class MainActivity extends AppCompatActivity {
                     .commit();
         });
 
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 }
