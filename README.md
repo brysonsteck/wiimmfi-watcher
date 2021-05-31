@@ -1,6 +1,6 @@
 # Wiimmfi Watcher
 
-Wiimmfi Watcher is an Android application that allows you to watch Mario Kart Wii gameplay by simply entering your friend code. This application can be found on the Google Play Store [here!](https://play.google.com/store/apps/details?id=me.brysonsteck.wiimmfiwatcher) This app can be used in English, German, French, Italian and Japanese.
+Wiimmfi Watcher is an Android application that allows you to watch Mario Kart Wii gameplay by simply entering your friend code. This application can be found on the Google Play Store [here!](https://play.google.com/store/apps/details?id=me.brysonsteck.wiimmfiwatcher) This app can be used in English, German, French, Italian, Japanese, Spanish, Portuguese and Korean.
 
 This application is currently being maintained by myself out of love for Mario Kart Wii and appreciation for the developers of Wiimmfi. I am in no way affiliated with Wiimmfi or any of the Wiimmfi developers.
 
@@ -18,7 +18,7 @@ This application is currently being maintained by myself out of love for Mario K
 
 ## Download
 
-You can visit the Google Play Store to download the most recent and stable version (link goes here once approved). You are also free to clone the repository and download the source code for the most stable release in the Releases tab if you would like to build it from scratch.
+You can visit the Google Play Store to download the most recent and stable version [here!](https://play.google.com/store/apps/details?id=me.brysonsteck.wiimmfiwatcher) You are also free to clone the repository and download the source code for the most stable release in the Releases tab if you would like to build it from scratch.
 
 ## Feedback
 
