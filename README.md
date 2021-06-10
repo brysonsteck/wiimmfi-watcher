@@ -60,5 +60,6 @@ along with Wiimmfi Watcher.  If not, see <https://www.gnu.org/licenses/>.
 ## Credits
 
 Wiimmfi Watcher is made possible by the following:
-* [Jsoup](https://jsoup.org) HTML parser, version 1.13.1 
-
+* [Wiimmfi](https://wiimmfi.de) for being the complete backbone of this app.
+* [Jsoup](https://jsoup.org) version 1.13.1, which powers getting the information from Wiimmfi with HTML parsing. (This will soon be replaced in favor of JSON parsing.)
+* [Gson](https://github.com/google/gson) version 2.8.7, which powers the updater (coming in 1.1.4).
