@@ -16,7 +16,6 @@ import me.brysonsteck.wiimmfiwatcher.fragments.WatchCodeFragment;
 public class MainActivity extends AppCompatActivity {
     AppDatabase database;
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +48,26 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        new Thread(() -> {
+            Updater updater = new Updater();
+            updater.compareRelease(BuildConfig.VERSION_NAME);
+            if (updater.isOutdated()) {
+                System.out.println("---------------------------------------------------------------");
+                System.out.println("\tA newer version of Wiimmfi Watcher is available! (" + updater.getNewestRelease() + ")");
+                System.out.println("\tView the release notes and the source code here: " + updater.getGithubRelease());
+                System.out.println("\t---------------------------------------------------------------");
+            } else {
+                System.out.println("---------------------------------------------------------------");
+                System.out.println("\t\t" + updater.getNewestRelease() + " is the latest release of Wiimmfi Watcher.");
+                System.out.println("\t\t---------------------------------------------------------------");
+            }
+        }).start();
+    }
+
     @Override
     protected void onStop() {
         super.onStop();
