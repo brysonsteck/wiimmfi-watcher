@@ -5,7 +5,6 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -13,11 +12,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 
-import org.jsoup.*;
-
 import java.util.ArrayList;
 
 import me.brysonsteck.wiimmfiwatcher.R;
+import me.brysonsteck.wiimmfiwatcher.wiimmfi.fragments.RoomFragment;
 
 public class WiimmfiActivity extends AppCompatActivity {
     ArrayList<Player> players = new ArrayList<>();

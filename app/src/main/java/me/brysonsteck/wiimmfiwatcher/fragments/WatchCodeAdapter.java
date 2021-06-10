@@ -1,4 +1,4 @@
-package me.brysonsteck.wiimmfiwatcher;
+package me.brysonsteck.wiimmfiwatcher.fragments;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -18,6 +18,7 @@ import com.google.android.material.textview.MaterialTextView;
 
 import java.util.ArrayList;
 
+import me.brysonsteck.wiimmfiwatcher.R;
 import me.brysonsteck.wiimmfiwatcher.model.FriendCode;
 import me.brysonsteck.wiimmfiwatcher.wiimmfi.WiimmfiActivity;
 

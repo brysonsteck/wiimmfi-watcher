@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import me.brysonsteck.wiimmfiwatcher.database.AppDatabase;
+import me.brysonsteck.wiimmfiwatcher.fragments.AboutFragment;
+import me.brysonsteck.wiimmfiwatcher.fragments.WatchCodeFragment;
 
 public class MainActivity extends AppCompatActivity {
     AppDatabase database;

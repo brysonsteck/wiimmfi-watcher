@@ -1,4 +1,4 @@
-package me.brysonsteck.wiimmfiwatcher;
+package me.brysonsteck.wiimmfiwatcher.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.res.Configuration;
@@ -17,6 +17,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.appbar.MaterialToolbar;
+
+import me.brysonsteck.wiimmfiwatcher.BuildConfig;
+import me.brysonsteck.wiimmfiwatcher.R;
 
 public class AboutFragment extends Fragment {
     View aboutButton;
