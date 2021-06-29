@@ -3,21 +3,17 @@ These are issues in Wiimmfi Watcher I am at least aware of. Please **DO NOT** su
 
 ### Completed For Release 1.1.4
 * Added an updater to make sure subsequent releases are up to date
+* Implement the updater into the UI
 
 ### Working On
-* Implement the updater into the UI
 * Create a better looking header for the watcher activity
     * Add 'sections' I guess???
-* Remove requirement of reading todo list before submitting issues
 
 ### Aware Of
 * The about fragment causes part of the screen to get cut off as the animation plays when returning to the main fragment (only if there are a few recent friend codes)
 * The navigation menu in Dark Mode is messed up (colors)
     * The selected player detail text and icon is black
     * The highlight color is barely visible
-* Pressing the watch or refresh buttons cause the app to hang until refreshing is completed.
-    * Working with threads should fix this
-    * Adding a dialog helps make it look like the app is working for now
 * Adding the option to toggle dark mode manually so older devices can have that privledge as well
 
 # Features I would like to add
