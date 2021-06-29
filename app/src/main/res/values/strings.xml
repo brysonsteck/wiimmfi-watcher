@@ -37,4 +37,9 @@
     <string name="header_null_error">This player is not online, not inside a room or does not exist. Click the refresh button to try again, or click on the back button to enter a different friend code.</string>
     <string name="jsoup_error">Whoops! Wiimmfi Watcher was unable to connect to the Wiimmfi servers. This could be that you are not connected to the internet, but it could be something else. Here was the error:\n\n%1$s\n\nIf the error is along the lines of \"Unable to resolve host\" or \"Timeout\", you are probably having internet issues. Make sure you are connected to the internet then click the refresh button or press back to watch a new friend code.\n\nIf the error is something other than that or if the error persists, make sure that Wiimmfi\'s website is currently running. Otherwise, please screenshot this screen and submit a bug report by clicking the About icon on the main page.</string>
     <string name="locating_text">Locating %1$s…</string>
+
+    <string name="update_title">A new update is available!</string>
+    <string name="update_message">A new version of Wiimmfi Watcher is available on the Play Store (version %1$s)! You can download it by pressing \"Update\".</string>
+    <string name="update_positive">Update</string>
+    <string name="update_negative">Later</string>
 </resources>

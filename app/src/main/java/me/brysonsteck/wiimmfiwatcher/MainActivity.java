@@ -1,13 +1,16 @@
 package me.brysonsteck.wiimmfiwatcher;
 
-import android.os.Build;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import me.brysonsteck.wiimmfiwatcher.database.AppDatabase;
 import me.brysonsteck.wiimmfiwatcher.fragments.AboutFragment;
@@ -15,6 +18,8 @@ import me.brysonsteck.wiimmfiwatcher.fragments.WatchCodeFragment;
 
 public class MainActivity extends AppCompatActivity {
     AppDatabase database;
+    final MaterialAlertDialogBuilder[] dialog = new MaterialAlertDialogBuilder[1];
+    boolean shownUpdate = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,20 +57,56 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        new Thread(() -> {
-            Updater updater = new Updater();
-            updater.compareRelease(BuildConfig.VERSION_NAME);
-            if (updater.isOutdated()) {
-                System.out.println("---------------------------------------------------------------");
-                System.out.println("\tA newer version of Wiimmfi Watcher is available! (" + updater.getNewestRelease() + ")");
-                System.out.println("\tView the release notes and the source code here: " + updater.getGithubRelease());
-                System.out.println("\t---------------------------------------------------------------");
-            } else {
-                System.out.println("---------------------------------------------------------------");
-                System.out.println("\t\t" + updater.getNewestRelease() + " is the latest release of Wiimmfi Watcher.");
-                System.out.println("\t\t---------------------------------------------------------------");
+        final String[] newestRelease = {""};
+        final boolean[] outdated = {false};
+        Thread thread = new Thread() {
+            public void run() {
+                Updater updater = new Updater();
+                updater.compareRelease(BuildConfig.VERSION_NAME);
+                if (updater.isOutdated()) {
+                    System.out.println("---------------------------------------------------------------");
+                    System.out.println("\tA newer version of Wiimmfi Watcher is available! (" + updater.getNewestRelease() + ")");
+                    System.out.println("\tView the release notes and the source code here: " + updater.getGithubRelease());
+                    System.out.println("\t---------------------------------------------------------------");
+                } else {
+                    System.out.println("---------------------------------------------------------------");
+                    System.out.println("\t\t" + updater.getNewestRelease() + " is the latest release of Wiimmfi Watcher.");
+                    System.out.println("\t\t---------------------------------------------------------------");
+                }
+                newestRelease[0] = updater.getNewestRelease();
+                outdated[0] = updater.isOutdated();
             }
-        }).start();
+        };
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        if (outdated[0] && !shownUpdate) {
+            shownUpdate = true;
+            final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+            new MaterialAlertDialogBuilder(this)
+                    .setTitle(R.string.update_title)
+                    .setMessage(getResources().getString(R.string.update_message, newestRelease[0]))
+                    .setNegativeButton(getResources().getString(R.string.update_negative), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    })
+                    .setPositiveButton(getResources().getString(R.string.update_positive), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            try {
+                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                            } catch (android.content.ActivityNotFoundException anfe) {
+                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                            }
+                        }
+                    })
+                    .show();
+        }
+
     }
 
     @Override

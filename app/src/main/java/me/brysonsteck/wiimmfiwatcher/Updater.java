@@ -22,8 +22,12 @@ public class Updater {
             String json = urlReader();
             JsonElement root = new JsonParser().parse(json);
             JsonObject rootObj = root.getAsJsonObject();
-            newestRelease = rootObj.get("current-release").getAsString();
-            githubRelease = rootObj.get("github-release").getAsString();
+            JsonElement softwareElement = rootObj.getAsJsonObject("wiimmfi-watcher");
+            JsonObject softwareObj = softwareElement.getAsJsonObject();
+            newestRelease = softwareObj.get("current-release").getAsString();
+            newestRelease = newestRelease.replace("\"", "");
+            githubRelease = softwareObj.get("github-release").getAsString();
+            githubRelease = githubRelease.replace("\"", "");
         } catch (IOException e) {
             System.out.println("An error has occurred while attempting to check for updates.");
             e.printStackTrace();
@@ -31,7 +35,7 @@ public class Updater {
     }
 
     public String urlReader() throws IOException {
-        URL website = new URL("https://brysonsteck.net/watcher.json");
+        URL website = new URL("https://brysonsteck.net/updates.json");
         URLConnection connection = website.openConnection();
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(
