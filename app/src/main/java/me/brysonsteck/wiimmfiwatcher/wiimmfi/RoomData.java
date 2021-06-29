@@ -14,7 +14,7 @@ public class RoomData {
     String roomHeader;
     String playerLink;
     String friendCode;
-    Exception error;
+    public Exception error;
     ArrayList<Player> players = new ArrayList<>();
     String userAgent = "Wiimmfi Watcher for Android (https://github.com/brysonsteck/wiimmfi-watcher) Version " + BuildConfig.VERSION_NAME;
 

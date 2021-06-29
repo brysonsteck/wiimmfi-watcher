@@ -1,10 +1,8 @@
-package me.brysonsteck.wiimmfiwatcher.wiimmfi;
+package me.brysonsteck.wiimmfiwatcher.wiimmfi.fragments;
 
 import android.os.Bundle;
-import android.os.Looper;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,11 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.net.UnknownHostException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import me.brysonsteck.wiimmfiwatcher.R;
+import me.brysonsteck.wiimmfiwatcher.wiimmfi.Player;
+import me.brysonsteck.wiimmfiwatcher.wiimmfi.RoomData;
 
 public class RoomFragment extends Fragment {
     String display;

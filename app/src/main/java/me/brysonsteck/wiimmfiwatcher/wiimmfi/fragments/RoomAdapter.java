@@ -1,4 +1,4 @@
-package me.brysonsteck.wiimmfiwatcher.wiimmfi;
+package me.brysonsteck.wiimmfiwatcher.wiimmfi.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,11 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.card.MaterialCardView;
 
-import org.jsoup.*;
-
 import java.util.ArrayList;
 
 import me.brysonsteck.wiimmfiwatcher.R;
+import me.brysonsteck.wiimmfiwatcher.wiimmfi.Player;
 
 public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.ViewHolder>{
     String display;

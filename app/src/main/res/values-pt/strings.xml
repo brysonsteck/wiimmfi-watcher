@@ -30,4 +30,8 @@
     <string name="license">&#169; Copyright 2021 Bryson Steck\n\nWiimmfi Watcher está disponível sob a Licença Pública Geral GNU Versão 3. Você pode visualizar a licença <a href="https://github.com/brysonsteck/wiimmfi-watcher/tree/master/LICENSE">aqui.</a>\n\nWiimmfi Watcher is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nWiimmfi Watcher is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with Wiimmfi Watcher. If not, see &lt;<a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>&gt;.</string>
     <string name="contact">Se você quiser entrar em contato comigo por qualquer motivo não relacionado a relatórios de bugs ou a este aplicativo em geral, pode entrar em contato comigo por e-mail <a href='mailto:steck.bryson@gmail.com'>steck.bryson@gmail.com</a> ou no Discord em bryzinga#9971.</string>
     <string name="locating_text">Localizando %1$s…</string>
+    <string name="update_positive">Atualizar</string>
+    <string name="update_negative">Mais tarde</string>
+    <string name="update_title">Uma nova atualização está disponível!</string>
+    <string name="update_message">Uma nova versão do Wiimmfi Watcher está disponível na Play Store (versão %1$s)! Você pode baixá-lo pressionando \"Atualizar\".</string>
 </resources>
