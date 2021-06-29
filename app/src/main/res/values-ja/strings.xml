@@ -30,4 +30,8 @@
     <string name="version_header">バージョン</string>
     <string name="version">Wiimmfi Watcherバージョン%1$sを実行しています。このバージョンのリリースノートは<![CDATA[<a href="https://github.com/brysonsteck/wiimmfi-watcher/releases/">こちら</a>]]>でご覧いただけます。</string>
     <string name="locating_text">%1$sの検索…</string>
+    <string name="update_positive">更新</string>
+    <string name="update_negative">後で</string>
+    <string name="update_title">新しいアップデートが利用可能です！</string>
+    <string name="update_message">Wiimmfiウォッチャーの新しいバージョンがPlayストアで入手できます（バージョン %1$s！「更新」を押すとダウンロードできます。</string>
 </resources>

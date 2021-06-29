@@ -30,4 +30,8 @@
     <string name="version_header">Versione</string>
     <string name="version">Stai eseguendo Wiimmfi Watcher versione %1$s. È possibile visualizzare le note di rilascio per questa versione <![CDATA[<a href="https://github.com/brysonsteck/wiimmfi-watcher/releases/">qui.</a>]]></string>
     <string name="locating_text">Individuazione %1$s…</string>
+    <string name="update_positive">Aggiornare</string>
+    <string name="update_negative">Dopo</string>
+    <string name="update_title">È disponibile un nuovo aggiornamento!</string>
+    <string name="update_message">Una nuova versione di Wiimmfi Watcher è disponibile sul Play Store (versione %1$s)! Puoi scaricarlo premendo \"Aggiorna\".</string>
 </resources>

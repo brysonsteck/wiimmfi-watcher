@@ -30,4 +30,8 @@
     <string name="license">&#169; Copyright 2021 Bryson Steck\n\nWiimmfi Watcher는 GNU General Public License 버전 3에 따라 사용할 수 있습니다. <a href="https://github.com/brysonsteck/wiimmfi-watcher/tree/master/LICENSE">여기</a>에서 라이센스를 볼 수 있습니다.\n\nWiimmfi Watcher is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nWiimmfi Watcher is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with Wiimmfi Watcher. If not, see &lt;<a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>&gt;.</string>
     <string name="contact">일반적으로 버그 보고서 나이 앱과 관련이없는 이유로 저를 붙잡 으려면 <a href='mailto:steck.bryson@gmail.com'>steck.bryson@gmail.com</a>으로 이메일을 보내거나 bryzinga#9971로 Discord를 통해 저에게 연락 할 수 있습니다.</string>
     <string name="locating_text">%1$s 찾는 중…</string>
+    <string name="update_positive">최신 정보</string>
+    <string name="update_negative">나중</string>
+    <string name="update_title">새로운 업데이트가 있습니다!</string>
+    <string name="update_message">Play 스토어 (버전 %1$s)에서 Wiimmfi Watcher의 새 버전을 사용할 수 있습니다! \"업데이트\"를 눌러 다운로드 할 수 있습니다.</string>
 </resources>
