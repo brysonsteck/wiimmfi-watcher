@@ -15,6 +15,7 @@ These are issues in Wiimmfi Watcher I am at least aware of. Please **DO NOT** su
     * The selected player detail text and icon is black
     * The highlight color is barely visible
 * Adding the option to toggle dark mode manually so older devices can have that privledge as well
+* Stop forcing a refresh after changing the data on the right
 
 # Features I would like to add
 * The watcher activity does not refresh automatically like the official website does
