@@ -13,6 +13,7 @@ import java.net.URLConnection;
 public class Updater {
 
     public boolean outdated = false;
+    public boolean failed = false;
     public String newestRelease;
     public String githubRelease;
     public String playStore = "https://play.google.com/store/apps/details?id=me.brysonsteck.wiimmfiwatcher";
@@ -54,7 +55,10 @@ public class Updater {
     }
 
     public void compareRelease(String deviceRelease) {
-        if (!deviceRelease.equals(newestRelease)) {
+        if (newestRelease == null) {
+            failed = true;
+        }
+        else if (!deviceRelease.equals(newestRelease)) {
             outdated = true;
         }
     }
@@ -62,6 +66,8 @@ public class Updater {
     public boolean isOutdated() {
         return outdated;
     }
+
+    public boolean hasFailed() { return failed; }
 
     public String getNewestRelease() {
         return newestRelease;
