@@ -14,8 +14,8 @@ import androidx.room.Room;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import me.brysonsteck.wiimmfiwatcher.database.AppDatabase;
-import me.brysonsteck.wiimmfiwatcher.fragments.AboutFragment;
 import me.brysonsteck.wiimmfiwatcher.fragments.WatchCodeFragment;
+import me.brysonsteck.wiimmfiwatcher.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity {
     AppDatabase database;
@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        View aboutButton = findViewById(R.id.about_button);
+        View settingsButton = findViewById(R.id.settings_button);
         if (savedInstanceState == null) {
-            aboutButton.setVisibility(View.VISIBLE);
+            settingsButton.setVisibility(View.VISIBLE);
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.friend_code_input_fragment, new WatchCodeFragment(), null)
                     .setReorderingAllowed(true)
@@ -39,18 +39,20 @@ public class MainActivity extends AppCompatActivity {
 
         database = Room.databaseBuilder(this, AppDatabase.class, "friend-codes-db").build();
 
-        aboutButton.setOnClickListener((about) -> {
-            aboutButton.setVisibility(View.INVISIBLE);
-            getSupportFragmentManager().beginTransaction()
-                    .setCustomAnimations(
-                            R.anim.slide_in,
-                            R.anim.fade_out,
-                            R.anim.fade_in,
-                            R.anim.slide_out)
-                    .replace(R.id.friend_code_input_fragment, new AboutFragment(), null)
-                    .setReorderingAllowed(true)
-                    .addToBackStack(null)
-                    .commit();
+        settingsButton.setOnClickListener((about) -> {
+//            settingsButton.setVisibility(View.INVISIBLE);
+//            getSupportFragmentManager().beginTransaction()
+//                    .setCustomAnimations(
+//                            R.anim.slide_in,
+//                            R.anim.fade_out,
+//                            R.anim.fade_in,
+//                            R.anim.slide_out)
+//                    .replace(R.id.friend_code_input_fragment, new AboutFragment(), null)
+//                    .setReorderingAllowed(true)
+//                    .addToBackStack(null)
+//                    .commit();
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
         });
 
     }

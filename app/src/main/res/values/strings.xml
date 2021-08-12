@@ -42,4 +42,6 @@
     <string name="update_message">A new version of Wiimmfi Watcher is available on the Play Store (version %1$s)! You can download it by pressing \"Update\".</string>
     <string name="update_positive">Update</string>
     <string name="update_negative">Later</string>
+
+    <string name="settings_title">Settings</string>
 </resources>

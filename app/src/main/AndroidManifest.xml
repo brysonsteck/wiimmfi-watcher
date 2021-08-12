@@ -19,6 +19,7 @@
         </intent-filter>
     </activity>
     <activity android:name=".wiimmfi.WiimmfiActivity"/>
-</application>
+        <activity android:name=".settings.SettingsActivity"/>
+    </application>
 
 </manifest>

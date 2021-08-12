@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".MainActivity">
+    tools:context=".settings.SettingsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,40 +26,38 @@
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                app:navigationIconTint="#FFFFFF"
                 android:elevation="0dp"
-                app:menu="@menu/top_app_bar_main"
-                app:title="Wiimmfi Watcher"
+                app:title="@string/settings_title"
                 app:titleTextColor="@color/white" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/friend_code_input_fragment"
+            android:id="@+id/fragmentContainerView"
+            android:name="me.brysonsteck.wiimmfiwatcher.settings.SettingsMainFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/room_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hapticFeedbackEnabled="false"
-            app:layout_constraintTop_toBottomOf="@+id/friend_code_input_fragment" />
-
-<!--        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
-<!--            android:id="@+id/clear_button"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="bottom|right"-->
-<!--            android:layout_margin="15dp"-->
-<!--            android:foregroundTint="#FFFFFF"-->
-<!--            android:text="Clear"-->
-<!--            android:textColor="#FFFFFF"-->
-<!--            app:backgroundTint="#1E88E5"-->
-<!--            app:icon="@drawable/ic_baseline_clear_all_24"-->
-<!--            app:iconTint="#FFFFFF"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent" />-->
+        <!--        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
+        <!--            android:id="@+id/clear_button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="bottom|right"-->
+        <!--            android:layout_margin="15dp"-->
+        <!--            android:foregroundTint="#FFFFFF"-->
+        <!--            android:text="Clear"-->
+        <!--            android:textColor="#FFFFFF"-->
+        <!--            app:backgroundTint="#1E88E5"-->
+        <!--            app:icon="@drawable/ic_baseline_clear_all_24"-->
+        <!--            app:iconTint="#FFFFFF"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent" />-->
 
         <!-- Screen content -->
         <!-- Use app:layout_behavior="@string/appbar_scrolling_view_behavior" to fit below top app bar -->
