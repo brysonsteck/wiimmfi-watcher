@@ -40,17 +40,6 @@ public class MainActivity extends AppCompatActivity {
         database = Room.databaseBuilder(this, AppDatabase.class, "friend-codes-db").build();
 
         settingsButton.setOnClickListener((about) -> {
-//            settingsButton.setVisibility(View.INVISIBLE);
-//            getSupportFragmentManager().beginTransaction()
-//                    .setCustomAnimations(
-//                            R.anim.slide_in,
-//                            R.anim.fade_out,
-//                            R.anim.fade_in,
-//                            R.anim.slide_out)
-//                    .replace(R.id.friend_code_input_fragment, new AboutFragment(), null)
-//                    .setReorderingAllowed(true)
-//                    .addToBackStack(null)
-//                    .commit();
             Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
         });
