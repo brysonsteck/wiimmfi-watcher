@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         final String[] newestRelease = {""};
         final boolean[] outdated = {false};
+        final boolean[] failed = {false};
         Thread thread = new Thread() {
             public void run() {
                 Updater updater = new Updater();
@@ -99,6 +101,10 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("\tA newer version of Wiimmfi Watcher is available! (" + updater.getNewestRelease() + ")");
                     System.out.println("\tView the release notes and the source code here: " + updater.getGithubRelease());
                     System.out.println("\t---------------------------------------------------------------");
+                } else if (updater.hasFailed()) {
+                    System.out.println("---------------------------------------------------------------");
+                    System.out.println("\t\t An error has occurred while getting information from the update server.");
+                    System.out.println("\t\t---------------------------------------------------------------");
                 } else {
                     System.out.println("---------------------------------------------------------------");
                     System.out.println("\t\t" + updater.getNewestRelease() + " is the latest release of Wiimmfi Watcher.");
@@ -106,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 newestRelease[0] = updater.getNewestRelease();
                 outdated[0] = updater.isOutdated();
+                failed[0] = updater.hasFailed();
             }
         };
         thread.start();
@@ -136,8 +143,10 @@ public class MainActivity extends AppCompatActivity {
                         }
                     })
                     .show();
+        } else if (failed[0] && !shownUpdate) {
+            shownUpdate = true;
+            Toast.makeText(this, "An error occurred while checking for updates for Wiimmfi Watcher. Please try again later.", Toast.LENGTH_LONG).show();
         }
-
     }
 
     @Override

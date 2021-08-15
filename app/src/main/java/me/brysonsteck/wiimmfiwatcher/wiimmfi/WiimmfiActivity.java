@@ -5,6 +5,7 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -32,6 +33,7 @@ public class WiimmfiActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
+        ImageView image = findViewById(R.id.image);
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView drawer = findViewById(R.id.navigation_view);
@@ -48,7 +50,7 @@ public class WiimmfiActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "fc", toolbar), null)
+                    .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "fc", toolbar, image), null)
                     .setReorderingAllowed(true)
                     .commit();
         }
@@ -61,49 +63,49 @@ public class WiimmfiActivity extends AppCompatActivity {
             if (menuItem.getItemId() == R.id.friend_code) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "fc", toolbar), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "fc", toolbar, image), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.roles) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "roles", toolbar), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "roles", toolbar, image), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.login_regions) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "login_regions", toolbar), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "login_regions", toolbar, image), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.room_match) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "room_match", toolbar), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "room_match", toolbar, image), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.world) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "world", toolbar), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "world", toolbar, image), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.conn_fail) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "conn_fail", toolbar), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "conn_fail", toolbar, image), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
             if (menuItem.getItemId() == R.id.vr_br) {
                 players.clear();
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "vr_br", toolbar), null)
+                        .replace(R.id.room_fragment, new RoomFragment(friendCode, players, playerLink[0], "vr_br", toolbar, image), null)
                         .setReorderingAllowed(true)
                         .commit();
             }
