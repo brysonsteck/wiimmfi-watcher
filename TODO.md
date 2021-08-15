@@ -1,16 +1,18 @@
-# This TODO list is out of date!
-This list is not accurate. Instead, checkout the TODO list on the `dev` branch [here,](https://github.com/brysonsteck/wiimmfi-watcher/blob/dev/TODO.md) which is updated as development progresses. This file here on the `master` branch is here to show what progress is being/has been made at the time of each release.
-
 # TODO
 These are issues in Wiimmfi Watcher I am at least aware of. Please **DO NOT** submit a bug report on the Google Form or an issue here on GitHub if it is mentioned on this list, unless you found a way that the bug can crash the app.
 
-### Completed For Release 1.1.4
-* Added an updater to make sure subsequent releases are up to date
-* Implement the updater into the UI
+### Completed For Release 1.2
+* Fixed "null" version causing updater to appear
+    * A Toast now appears discretely notifying the user that it failed to connect to the server.
+* Track photos!
+* No longer requiring strict rules in order to submit an issue or google form.
 
 ### Working On
 * Create a better looking header for the watcher activity
-    * Add 'sections' I guess???
+    * Add 'sections' I guess???i
+* Add the ability to search for a Mii name instead of a friend code
+* Create a more feature rich settings and about page
+    * manual dark mode toggles, clear recent codes button, etc.
 
 ### Aware Of
 * The about fragment causes part of the screen to get cut off as the animation plays when returning to the main fragment (only if there are a few recent friend codes)
@@ -24,10 +26,5 @@ These are issues in Wiimmfi Watcher I am at least aware of. Please **DO NOT** su
     * Added a refresh button, but is there a better way with Jsoup? Like a new Thread?
 * Add the Mario Kart Wii font
     * I'll have to see if I can pull it from the Wiimmfi website somehow
-* Add pictures for Nintendo and CTGP tracks
-    * Google's policies might prevent this...
 * The ability to save friend codes and name them, not just save recent friend codes
-* Create a more feature rich settings and about page
-    * manual dark mode toggles, clear recent codes button, etc.
-* Add the ability to search for a Mii name instead of a friend code
 * Show statistics for other games
