@@ -61,7 +61,7 @@ public class SetImageView {
                 image.setImageResource(R.drawable.course_rws);
             } else if (header.contains("ds desert hills")) {
                 image.setImageResource(R.drawable.course_rdh);
-            } else if (header.contains("gba bowser's castle 3")) {
+            } else if (header.contains("gba bowser castle 3")) {
                 image.setImageResource(R.drawable.course_rbc3);
             } else if (header.contains("n64 dk's jungle parkway")) {
                 image.setImageResource(R.drawable.course_rdkjp);
