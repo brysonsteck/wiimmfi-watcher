@@ -12,6 +12,7 @@
     <string name="watch">Watch</string>
     <string name="watching">Watching %1$s</string>
     <string name="enter_fc">Enter a friend code to watch</string>
+    <string name="enter_mii">Enter the name of a Mii to watch</string>
     <string name="recent_fc">Recently watched friend codes:</string>
     <string name="version_header">Version</string>
     <string name="version">You are running Wiimmfi Watcher version %1$s. You can view the release notes for this version <![CDATA[<a href="https://github.com/brysonsteck/wiimmfi-watcher/releases/">here.</a>]]></string>

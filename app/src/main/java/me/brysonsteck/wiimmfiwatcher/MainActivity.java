@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.tabs.TabLayout;
 
 import me.brysonsteck.wiimmfiwatcher.database.AppDatabase;
 import me.brysonsteck.wiimmfiwatcher.fragments.AboutFragment;
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             aboutButton.setVisibility(View.VISIBLE);
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.friend_code_input_fragment, new WatchCodeFragment(), null)
+                    .replace(R.id.friend_code_input_fragment, new WatchCodeFragment(true), null)
                     .setReorderingAllowed(true)
                     .commit();
         }
@@ -52,6 +53,36 @@ public class MainActivity extends AppCompatActivity {
                     .commit();
         });
 
+//        TabLayout tabLayout = findViewById(R.id.tablayout_main);
+//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//            @Override
+//            public void onTabSelected(TabLayout.Tab tab) {
+//                if (tab.getText().equals("Friend Code")) {
+//                        getSupportFragmentManager().beginTransaction()
+//                                .replace(R.id.friend_code_input_fragment, new WatchCodeFragment(true), null)
+//                                .setReorderingAllowed(true)
+//                                .commit();
+//
+//                    }
+//                else if (tab.getText().equals("Mii Name")) {
+//                    getSupportFragmentManager().beginTransaction()
+//                            .replace(R.id.friend_code_input_fragment, new WatchCodeFragment(false), null)
+//                            .setReorderingAllowed(true)
+//                            .commit();
+//                }
+//                }
+
+//            @Override
+//            public void onTabUnselected(TabLayout.Tab tab) {
+//
+//            }
+//
+//            @Override
+//            public void onTabReselected(TabLayout.Tab tab) {
+//
+//            }
+//        });
+//
     }
 
     @Override

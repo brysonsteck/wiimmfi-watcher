@@ -15,20 +15,39 @@
         <com.google.android.material.appbar.AppBarLayout
             style="@style/Widget.MaterialComponents.AppBarLayout.Primary"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:fitsSystemWindows="true">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
-                style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@android:color/transparent"
-                android:elevation="0dp"
-                app:navigationIcon="@drawable/ic_baseline_menu_24"
-                app:navigationIconTint="#FFFFFF"
-                app:title="Watching 0000-0000-0000"
-                app:titleTextColor="#FFFFFF" />
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
+                app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/course_ctgp" />
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    style="@style/Widget.MaterialComponents.Toolbar.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:elevation="0dp"
+                    app:navigationIcon="@drawable/ic_baseline_menu_24"
+                    app:title="Watching 0000-0000-0000"
+                    app:titleTextColor="#FFFFFF" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -51,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:theme="@style/Theme.WiimmfiWatcher"
+        android:theme="@style/Theme.WiimmfiWatcher.Watching"
         app:headerLayout="@layout/header_navigation_drawer"
         app:menu="@menu/drawer_navigation_menu">
 
