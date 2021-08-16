@@ -18,7 +18,8 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-    <activity android:name=".wiimmfi.WiimmfiActivity"/>
+    <activity android:name=".wiimmfi.WiimmfiActivity"
+        android:theme="@style/Theme.WiimmfiWatcher.Watching"/>
 </application>
 
 </manifest>

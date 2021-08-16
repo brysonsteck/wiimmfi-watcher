@@ -27,9 +27,11 @@ import me.brysonsteck.wiimmfiwatcher.wiimmfi.WiimmfiActivity;
 
 public class WatchCodeFragment extends Fragment {
     ProgressDialog progressBar;
+    boolean friendCodeMode = true;
 
-    public WatchCodeFragment() {
+    public WatchCodeFragment(boolean friendCodeMode) {
         super(R.layout.watch_code_fragment);
+        this.friendCodeMode = friendCodeMode;
     }
 
     public boolean isValidFriendCode(String friendCode) {
@@ -107,6 +109,9 @@ public class WatchCodeFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         EditText friendCode = view.findViewById(R.id.friend_code_edit_text);
+        if (!friendCodeMode) {
+            friendCode.setHint(R.string.enter_mii);
+        }
         Button watchButton = view.findViewById(R.id.watch_button);
         watchButton.setOnClickListener(buttonClick -> {
             startWiimmfiActivity(
