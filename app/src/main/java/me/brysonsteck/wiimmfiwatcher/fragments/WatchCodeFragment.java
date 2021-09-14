@@ -3,6 +3,7 @@ package me.brysonsteck.wiimmfiwatcher.fragments;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.transition.TransitionInflater;
 import android.view.KeyEvent;
 import android.view.View;
@@ -64,6 +65,11 @@ public class WatchCodeFragment extends Fragment {
         progressBar = new ProgressDialog(getContext(), R.style.AppCompatAlertDialogStyle);
 
         MaterialTextView errorText = view.findViewById(R.id.error_text);
+        // TODO: Remove these 3 lines of code if DDoS protection is removed \/
+        errorText.setText(R.string.ddos_notice);
+        errorText.setClickable(true);
+        errorText.setMovementMethod(LinkMovementMethod.getInstance());
+
         WatchCodeAdapter adapter = new WatchCodeAdapter(getContext(), viewModel.getEntries(), errorText, progressBar);
         viewModel.getEntries().addOnListChangedCallback(new ObservableList.OnListChangedCallback<ObservableList<FriendCode>>() {
             @Override

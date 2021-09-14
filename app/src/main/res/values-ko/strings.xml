@@ -34,4 +34,5 @@
     <string name="update_negative">나중</string>
     <string name="update_title">새로운 업데이트가 있습니다!</string>
     <string name="update_message">Play 스토어 (버전 %1$s)에서 Wiimmfi Watcher의 새 버전을 사용할 수 있습니다! \"업데이트\"를 눌러 다운로드 할 수 있습니다.</string>
+    <string name="ddos_notice">*** 알아 채다 ***\nWiimmfi의 도메인은 최근 웹사이트에 대한 DDoS 공격으로 인해 DDoS 보호를 구현했습니다. 이것은 보호가 제거될 때까지 Wiimmfi Watcher의 기능에 영향을 미칩니다. 다음 화면에서 "Status=503" 오류가 표시되면 그 동안 <a href="https://wiimmfi.de">공식 웹사이트</a>를 사용해야 할 수 있습니다. 불편을 끼쳐 드린 것에 대해 죄송합니다. 이 <a href="https://github.com/brysonsteck/wiimmfi-watcher/issues/2">GitHub 문제</a>에서 이 문제의 상태를 볼 수 있습니다.</string>
 </resources>

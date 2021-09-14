@@ -41,5 +41,6 @@
     <string name="update_negative">Ensuite</string>
     <string name="update_title">Une nouvelle mise à jour est disponible!</string>
     <string name="update_message">Une nouvelle version de Wiimmfi Watcher est disponible sur le Play Store (version %1$s)! Vous pouvez le télécharger en appuyant sur \"Mettre à jour\".</string>
+    <string name="ddos_notice">*** AVIS ***\nLe domaine de Wiimmfi a récemment mis en place une protection DDoS en raison des récentes attaques DDoS sur le site Web. Cela affectera les fonctionnalités de Wiimmfi Watcher jusqu\'à ce que la protection soit supprimée. Si vous voyez une erreur "Status=503" sur l\'écran suivant, vous devrez peut-être utiliser le <a href="https://wiimmfi.de">site officiel</a> entre-temps. Mes excuses pour le derangement. Vous pouvez afficher l\'état de ce problème avec ce <a href="https://github.com/brysonsteck/wiimmfi-watcher/issues/2">problème GitHub.</a></string>
 
 </resources>
