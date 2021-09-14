@@ -1,3 +1,7 @@
+# ----- **NOTICE** -----
+
+Wiimmfi Watcher's functionality is currently broken due to new DDoS protection currently implemented on Wiimmfi's domain since September 4th, 2021. All requests made by Wiimmfi Watcher currently returns `HTML Error 503: Service Unavailable`. Until a work around is found (which will be unlikely for a guy like me) or the DDoS protection is taken down, Wiimmfi Watcher may not work as expected.
+
 # Wiimmfi Watcher
 
 Wiimmfi Watcher is an unofficial Android application that allows you to watch Mario Kart Wii gameplay by simply entering your friend code. This application can be found on the Google Play Store [here!](https://play.google.com/store/apps/details?id=me.brysonsteck.wiimmfiwatcher) This app can be used in several different languages.
