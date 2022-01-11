@@ -46,7 +46,7 @@ Please note that donations are **NOT** required and does **NOT** add or remove f
 
 ## License
 
-&copy; 2021 Bryson Steck. Wiimmfi Watcher is licensed under the [GPL-3.0](LICENSE).
+&copy; 2021-2022 Bryson Steck. Wiimmfi Watcher is licensed under the [GPL-3.0](LICENSE).
 
 Wiimmfi Watcher is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
